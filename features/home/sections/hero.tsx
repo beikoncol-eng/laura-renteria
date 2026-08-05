@@ -31,7 +31,7 @@ export function Hero() {
               text={t('headline')}
               className="font-display tracking-display text-ink text-[clamp(2.75rem,5vw,5rem)] leading-[1.04]"
             />
-            <Reveal delay={0.35} className="mt-[var(--space-64)]">
+            <Reveal blur delay={0.35} className="mt-[var(--space-64)]">
               <p className="font-body text-muted max-w-[42ch] text-[1.0625rem] leading-[1.65] md:text-[1.1875rem]">
                 {t('subhead')}
               </p>

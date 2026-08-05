@@ -21,6 +21,8 @@ export interface RevealProps {
   delay?: number;
   /** Upward travel distance in px (text variant). */
   y?: number;
+  /** Add a brief defocus to the entrance (text variant) for a softer feel. */
+  blur?: boolean;
 }
 
 export function Reveal({
@@ -29,6 +31,7 @@ export function Reveal({
   variant = 'text',
   delay = 0,
   y = 20,
+  blur = false,
 }: RevealProps) {
   const reduce = useReducedMotion();
   const isImage = variant === 'image';
@@ -41,8 +44,8 @@ export function Reveal({
           shown: { clipPath: 'inset(0% 0% 0% 0%)', scale: 1 },
         }
       : {
-          hidden: { opacity: 0, y },
-          shown: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y, ...(blur ? { filter: 'blur(10px)' } : {}) },
+          shown: { opacity: 1, y: 0, ...(blur ? { filter: 'blur(0px)' } : {}) },
         };
 
   return (

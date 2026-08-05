@@ -5,6 +5,7 @@ import { Text } from '@/components/typography';
 import {
   Reveal,
   StaggerText,
+  SplitText,
   EditorialImage,
   ParallaxImage,
   ImagePlaceholder,
@@ -60,7 +61,7 @@ function AboutHero() {
               delay={0.1}
               className="font-display tracking-display text-ink text-[clamp(2.75rem,5.5vw,5.5rem)] leading-[1.02]"
             />
-            <Reveal delay={0.5} className="mt-[var(--space-48)]">
+            <Reveal blur delay={0.5} className="mt-[var(--space-48)]">
               <Text variant="body" className="text-muted max-w-[44ch]">
                 {t('lead')}
               </Text>
@@ -142,26 +143,27 @@ function Philosophy() {
         </Reveal>
         <div className="max-w-[24ch]">
           {lines.map((line, index) => (
-            <Reveal key={index} delay={index * 0.08}>
-              <span
-                className={cn(
-                  'font-display tracking-display block text-[clamp(1.75rem,4.5vw,3.5rem)] leading-[1.16]',
-                  index === lines.length - 1 ? 'text-muted' : 'text-ink',
-                )}
-              >
-                {line}
-              </span>
-            </Reveal>
+            <SplitText
+              key={index}
+              as="span"
+              by="line"
+              text={line}
+              delay={index * 0.08}
+              className={cn(
+                'font-display tracking-display text-[clamp(1.75rem,4.5vw,3.5rem)] leading-[1.16]',
+                index === lines.length - 1 ? 'text-muted' : 'text-ink',
+              )}
+            />
           ))}
         </div>
 
         <Grid md={12} gap={64} className="mt-[var(--space-120)]">
-          <Reveal className="md:col-span-5">
+          <Reveal blur className="md:col-span-5">
             <p className="font-display tracking-display text-ink text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.15]">
               {tL('a')}
             </p>
           </Reveal>
-          <Reveal delay={0.1} className="md:col-span-5 md:col-start-8">
+          <Reveal blur delay={0.1} className="md:col-span-5 md:col-start-8">
             <p className="font-display tracking-display text-muted text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.15] md:text-right">
               {tL('b')}
             </p>

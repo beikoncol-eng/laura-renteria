@@ -25,10 +25,21 @@ export function TransitionWrapper({ children }: TransitionWrapperProps) {
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={pathname}
-        initial={{ opacity: 0, y: reduce ? 0 : 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: reduce ? 0 : -8 }}
-        transition={{ duration: reduce ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] }}
+        initial={{
+          opacity: 0,
+          y: reduce ? 0 : 12,
+          filter: reduce ? 'blur(0px)' : 'blur(6px)',
+        }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+        exit={{
+          opacity: 0,
+          y: reduce ? 0 : -8,
+          filter: reduce ? 'blur(0px)' : 'blur(4px)',
+        }}
+        transition={{
+          duration: reduce ? 0 : 0.6,
+          ease: [0.16, 1, 0.3, 1],
+        }}
       >
         {children}
       </motion.div>
