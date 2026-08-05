@@ -1,0 +1,98 @@
+/* ─────────────────────────────────────────────────────────────
+   DESIGN TOKENS — Laura Rentería
+   Source of truth: README Design System.
+   These are raw foundation values only. No component styling here.
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Color ─────────────────────────────────────────────────
+     Mostly warm white + black. One subtle accent (deep navy),
+     muted gold used very sparingly. No gradients, no shadows. */
+  --color-bg: #faf9f6; /* Warm White — primary background */
+  --color-cream: #f4f1ea; /* Warm Cream — section backgrounds only */
+  --color-ink: #141414; /* Primary text (off-black, never #000) */
+  --color-muted: #666666; /* Secondary text */
+  --color-navy: #1c2a3a; /* Deep Navy — accent only */
+  --color-gold: #9a7b4f; /* Muted Gold — very limited use */
+  --color-border: rgb(20 20 20 / 0.08); /* Almost-invisible borders */
+
+  /* ── Typography families ───────────────────────────────────
+     Display: editorial serif. Body: neutral grotesk. Licensed
+     faces (Canela / Söhne) drop in later; fallbacks load now. */
+  --font-display:
+    var(--font-serif), 'Canela', 'GT Sectra', 'Editorial New', Georgia,
+    'Times New Roman', serif;
+  --font-body:
+    var(--font-sans), 'Söhne', 'Neue Haas Grotesk', 'Suisse Int’l', system-ui,
+    -apple-system, 'Segoe UI', sans-serif;
+
+  /* ── Type scale — desktop (px) ─────────────────────────────*/
+  --text-display-xl: 6rem; /* 96 */
+  --text-display-l: 5rem; /* 80 */
+  --text-display-m: 4rem; /* 64 */
+  --text-heading: 3rem; /* 48 */
+  --text-subheading: 2rem; /* 32 */
+  --text-body: 1.25rem; /* 20 */
+  --text-small: 1rem; /* 16 */
+  --text-caption: 0.875rem; /* 14 */
+
+  /* ── Type scale — mobile (px) ──────────────────────────────*/
+  --text-display-mobile: 3rem; /* 48 */
+  --text-heading-mobile: 2.25rem; /* 36 */
+  --text-subheading-mobile: 1.75rem; /* 28 */
+  --text-body-mobile: 1.125rem; /* 18 */
+  --text-caption-mobile: 0.9375rem; /* 15 */
+
+  /* ── Typographic detail ────────────────────────────────────*/
+  --tracking-display: -0.02em;
+  --tracking-label: 0.15em;
+  --leading-display: 1.08; /* 1.05–1.12 */
+  --leading-body: 1.7; /* 1.6–1.8 */
+  --measure-body: 65ch; /* never exceed */
+
+  /* ── Spacing scale — 8-point system ────────────────────────*/
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-120: 7.5rem;
+  --space-160: 10rem;
+  --space-240: 15rem;
+
+  /* ── Section rhythm ────────────────────────────────────────*/
+  --section-y-desktop: var(--space-240);
+  --section-y-desktop-min: var(--space-160);
+  --section-y-mobile: var(--space-120);
+
+  /* ── Layout ────────────────────────────────────────────────*/
+  --content-max: 1440px; /* max content width */
+  --content-container: 1280px; /* container width */
+  --gutter: 8vw; /* minimum side margin */
+  --gutter-mobile: 1.5rem; /* 24px */
+  --grid-gap: 2rem; /* 32px column gap */
+
+  /* ── Header ────────────────────────────────────────────────*/
+  --header-h-desktop: 88px;
+  --header-h-mobile: 72px;
+
+  /* ── Interface ─────────────────────────────────────────────*/
+  --radius: 2px; /* maximum radius, prefer 0 */
+  --button-h: 52px;
+  --input-h: 56px;
+  --textarea-min-h: 180px;
+  --touch-min: 44px; /* minimum touch target */
+
+  /* ── Motion ────────────────────────────────────────────────
+     Fade / reveal / opacity / translation only. Ease-out only.
+     No bounce, elastic, spring, rotation, or scaling. */
+  --dur-fast: 200ms;
+  --dur-base: 320ms;
+  --dur-slow: 500ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

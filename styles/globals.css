@@ -1,0 +1,71 @@
+/* ─────────────────────────────────────────────────────────────
+   GLOBAL STYLESHEET — Laura Rentería
+   Load order: Tailwind → tokens → theme mapping → base → utils.
+   ───────────────────────────────────────────────────────────── */
+
+@import 'tailwindcss';
+@import './tokens.css';
+@import './typography.css';
+@import './utilities.css';
+
+/* Expose design tokens to Tailwind v4 as first-class theme values so
+   utilities like `text-ink`, `bg-cream`, `font-display`, `border-line`
+   resolve to the design system. Foundation only — no component classes.
+
+   NOTE ON SPACING: we deliberately do NOT remap the 8-pt scale into
+   Tailwind's `--spacing-*` namespace. Tailwind v4's native numeric scale is
+   already 4px-based, so every value in our system is reachable directly
+   (e.g. `py-60` = 240px, `py-40` = 160px, `p-6` = 24px). The raw `--space-*`
+   / section-rhythm variables in tokens.css remain the authoritative source
+   and are consumed by primitives via arbitrary values, e.g. `gap-[var(--space-24)]`. */
+@theme inline {
+  --color-paper: var(--color-bg);
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-navy: var(--color-navy);
+  --color-gold: var(--color-gold);
+  --color-line: var(--color-border);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --tracking-display: var(--tracking-display);
+  --tracking-label: var(--tracking-label);
+}
+
+/* Minimal base reset — box model + media defaults. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Visible, editorial focus state for keyboard users. */
+:focus-visible {
+  outline: 1px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-bg);
+}

@@ -1,0 +1,35 @@
+{
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "primaryNavigation": "Primary",
+    "footerNavigation": "Footer",
+    "socialNavigation": "Social media",
+    "homeLink": "Laura Rentería — Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "cta": {
+    "label": "Contact"
+  },
+  "language": {
+    "label": "Language",
+    "en": "EN",
+    "es": "ES"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "social": "Social",
+    "legal": "Legal",
+    "rights": "All rights reserved",
+    "contactPending": "Contact details pending."
+  }
+}

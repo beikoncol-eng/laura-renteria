@@ -1,0 +1,35 @@
+/* ─────────────────────────────────────────────────────────────
+   TYPOGRAPHY — foundation only.
+   Assigns the two families and safe reading defaults. Visual
+   hierarchy (display scale, section labels) is composed later
+   inside typography components, not here.
+   ───────────────────────────────────────────────────────────── */
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+}
+
+/* Headings default to the editorial serif; specific sizes are
+   applied through typography components, never ad hoc. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}

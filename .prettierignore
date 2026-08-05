@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+build
+public/assets
+skills
+pnpm-lock.yaml
+package-lock.json
+messages/*.json

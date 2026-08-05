@@ -1,0 +1,12 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "prettier"],
+  "ignorePatterns": ["skills/**", "node_modules/**", ".next/**"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      { "prefer": "type-imports", "fixStyle": "inline-type-imports" }
+    ],
+    "no-console": ["warn", { "allow": ["warn", "error"] }]
+  }
+}
