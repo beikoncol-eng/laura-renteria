@@ -5,9 +5,10 @@ import { Reveal, EditorialImage } from '@/components/ui';
 import { MEDIA } from '@/lib/media';
 
 /**
- * 5. Process ("How I Work") — the five-step method. Composition is flipped
- * against About/Closing (image LEFT, method RIGHT) to break repetition. Premium
- * hierarchy: large numerals, quiet dividers, generous step spacing.
+ * 5. Process ("How I Work") — the five-step method. The visual side is a
+ * two-frame editorial composition (curation + moodboard) that stays with the
+ * reader as the method scrolls, so the column never feels empty. Composition is
+ * image-left / method-right to break the rhythm.
  */
 interface ProcessStep {
   title: string;
@@ -23,7 +24,7 @@ export function Process() {
   return (
     <Section>
       <Container>
-        <div className="mb-[var(--space-64)] max-w-[46rem]">
+        <div className="mb-[var(--space-80)] max-w-[46rem]">
           <Text variant="label" as="p" className="mb-[var(--space-24)]">
             {t('eyebrow')}
           </Text>
@@ -35,17 +36,32 @@ export function Process() {
           </Text>
         </div>
 
-        <Grid md={12} gap={64} className="items-start">
+        <Grid md={12} gap={80} className="items-start">
           <div className="md:col-span-5">
-            <Reveal variant="image">
-              <div className="group relative aspect-[3/4] w-full overflow-hidden md:sticky md:top-[calc(var(--header-h-desktop)+2rem)]">
-                <EditorialImage
-                  asset={MEDIA.processCuration}
-                  sizes="(max-width: 768px) 100vw, 42vw"
-                  position="50% 18%"
-                />
-              </div>
-            </Reveal>
+            <div className="flex flex-col gap-[var(--space-32)] md:sticky md:top-[calc(var(--header-h-desktop)+2rem)]">
+              <Reveal variant="image">
+                <div className="group relative aspect-[3/4] w-full overflow-hidden">
+                  <EditorialImage
+                    asset={MEDIA.processCuration}
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                    position="50% 12%"
+                  />
+                </div>
+              </Reveal>
+              <Reveal
+                variant="image"
+                delay={0.1}
+                className="ml-[var(--space-64)]"
+              >
+                <div className="group relative aspect-[4/5] w-full overflow-hidden">
+                  <EditorialImage
+                    asset={MEDIA.creativeDirectionCraft}
+                    sizes="(max-width: 768px) 100vw, 32vw"
+                    position="50% 20%"
+                  />
+                </div>
+              </Reveal>
+            </div>
           </div>
 
           <ol className="md:col-span-6 md:col-start-7">

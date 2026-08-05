@@ -4,8 +4,9 @@ import { Text } from '@/components/typography';
 import { Reveal, Accordion, type AccordionItemData } from '@/components/ui';
 
 /**
- * 7. FAQ — the real questions from the approved deck, in a contained accordion.
- * Used only because the content requires it.
+ * 7. FAQ — a centered editorial column (~900px). Centered heading, centered
+ * accordion, generous spacing; a calm height + opacity opening, not a
+ * component-kit toggle.
  */
 interface FaqItem {
   q: string;
@@ -27,19 +28,20 @@ export function FaqPreview() {
 
   return (
     <Section>
-      <Container width="narrow">
-        <div className="mb-[var(--space-64)] text-center">
-          <Text variant="label" as="p" className="mb-[var(--space-24)]">
-            {t('eyebrow')}
-          </Text>
-          <Text as="h2" variant="heading">
-            {t('headline')}
-          </Text>
+      <Container>
+        <div className="mx-auto max-w-[56rem]">
+          <div className="mb-[var(--space-64)] text-center">
+            <Text variant="label" as="p" className="mb-[var(--space-24)]">
+              {t('eyebrow')}
+            </Text>
+            <Text as="h2" variant="display-m">
+              {t('headline')}
+            </Text>
+          </div>
+          <Reveal>
+            <Accordion items={accordionItems} />
+          </Reveal>
         </div>
-
-        <Reveal>
-          <Accordion items={accordionItems} />
-        </Reveal>
       </Container>
     </Section>
   );

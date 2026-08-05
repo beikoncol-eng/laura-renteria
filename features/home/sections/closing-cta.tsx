@@ -19,11 +19,11 @@ export function ClosingCta() {
         <Grid md={12} gap={64} className="items-center">
           <div className="md:col-span-5">
             <Reveal variant="image">
-              <div className="group relative aspect-[4/5] w-full overflow-hidden">
+              <div className="group relative aspect-[3/4] w-full overflow-hidden">
                 <EditorialImage
                   asset={MEDIA.closingPortrait}
                   sizes="(max-width: 768px) 100vw, 42vw"
-                  position="50% 22%"
+                  position="50% 12%"
                 />
               </div>
             </Reveal>

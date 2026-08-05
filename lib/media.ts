@@ -50,6 +50,12 @@ export const MEDIA = {
     ...PORTRAIT,
     alt: 'Laura Rentería seated, looking to camera.',
   },
+  /** Studio-wide — the workspace: desk, chair and moodboard (3502). */
+  studioWide: {
+    src: '/assets/images/web/laura-3502.jpg',
+    ...PORTRAIT,
+    alt: 'Laura Rentería reclining in the studio beside a desk and moodboard.',
+  },
 
   /* ── Creative Direction service page (reserved frames) ─────────────────── */
 

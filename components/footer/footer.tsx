@@ -20,7 +20,7 @@ export function SiteFooter() {
   return (
     <footer
       aria-label={tA11y('footerNavigation')}
-      className="border-line border-t pt-[var(--space-96)] pb-[var(--space-64)] md:pt-[var(--space-160)]"
+      className="border-line border-t pt-[var(--space-120)] pb-[var(--space-96)] md:pt-[var(--space-160)] md:pb-[var(--space-120)]"
     >
       <Container>
         <p className="font-display tracking-display text-ink mb-[var(--space-120)] max-w-[20ch] text-[clamp(2rem,4vw,3.25rem)] leading-[1.1] text-balance">
@@ -73,13 +73,6 @@ export function SiteFooter() {
             </Caption>
           </Stack>
         </Grid>
-
-        {/* Signature — the wordmark as the last page of the magazine. */}
-        <div className="mt-[var(--space-120)] overflow-hidden">
-          <p className="font-display text-ink text-[clamp(3rem,13vw,11rem)] leading-[0.9] tracking-[-0.03em]">
-            {SITE.name}
-          </p>
-        </div>
       </Container>
     </footer>
   );
