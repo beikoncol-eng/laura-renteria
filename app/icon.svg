@@ -2,10 +2,11 @@
   <rect width="64" height="64" fill="#141414" />
   <text
     x="32"
-    y="45"
+    y="43"
     text-anchor="middle"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="40"
+    font-size="30"
+    letter-spacing="0.5"
     fill="#FAF9F6"
-  >L</text>
+  >LR</text>
 </svg>

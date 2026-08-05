@@ -44,8 +44,13 @@ Three files in `public/assets/video/` (singular), named by intent:
 | `laura intro marketing.mp4` (221 MB) | Digital Marketing service page | Defer to that page, compressed. Not a Home asset. |
 | `Laura intro asesoria imagen.mp4` (161 MB) | Image Consulting service page | Defer to that page, compressed. Not a Home asset. |
 
-**No video is wired.** This environment has no ffmpeg, so I cannot transcode or
-generate posters, and the raw files are unusable on the web as-is.
+**Optimized web videos are now built and deployed** (not yet wired into any
+page). Each raw 4K vertical original (~160–221 MB) was transcoded to
+`public/assets/videos/*.mp4` at 1080×1920 H.264, 30fps, faststart (6–8 MB each)
+with a poster `*.jpg`:
+`home-intro`, `digital-marketing-intro`, `image-consulting-intro`. Raw camera
+originals remain git-ignored. Wire them into the hero/service pages in a later
+phase (muted, looping, `playsInline`, poster, reduced-motion fallback).
 
 ### Required video derivatives (before any video ships)
 Per file: **H.264 MP4 + VP9/AV1 WebM**, **1080p**, **≤ ~6–8 MB**, **~12–20 s**,

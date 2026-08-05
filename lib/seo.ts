@@ -44,7 +44,9 @@ export function buildMetadata({
   }
   languages['x-default'] = `${SITE.url}/${routing.defaultLocale}${cleanPath}`;
 
-  const images = image ? [image] : undefined;
+  // Default every page to the brand OG card (resolved to absolute via
+  // metadataBase) so shared links always present a polished visual identity.
+  const images = [image ?? SEO_DEFAULTS.defaultOgImage];
 
   return {
     ...(title ? { title } : {}),

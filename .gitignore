@@ -49,10 +49,11 @@ yarn-error.log*
 # raw source media — kept out of git (large originals). Optimized, committed
 # web derivatives live in /public/assets/images/web. Archive the raw originals
 # and raw videos OUT of the deploy bundle before shipping (see ASSET_MAP.md).
-/public/assets/images/*.JPG
-/public/assets/images/*.jpeg
+# Only the raw camera originals are ignored. Optimized, committed derivatives
+# ship: /public/assets/images/web (photos), /public/assets/images/og-default.jpg
+# (OG card), and /public/assets/videos (web videos + posters).
+/public/assets/images/IMG_*.JPG
 /public/assets/video/*.mp4
-/public/assets/videos/*.mp4
 
 # local media source archive (if used)
 /media-source/
