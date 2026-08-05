@@ -28,6 +28,41 @@
     "home": {
       "title": "Laura Rentería — Estrategia de marca, dirección creativa e imagen",
       "description": "Consultora en branding, dirección creativa y marca personal. Construyo marcas y desarrollo a las personas que las representan. Nueva York · Colombia."
+    },
+    "about": {
+      "title": "Sobre mí",
+      "description": "Trabajo en el punto donde se cruzan tres cosas: la estrategia, la estética y la persona."
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "Tres áreas de consultoría: dirección creativa, marketing digital y consultoría de imagen."
+    },
+    "work": {
+      "title": "Casos",
+      "description": "Proyectos donde la marca y la persona se construyeron a la vez."
+    },
+    "portfolio": {
+      "title": "Portafolio",
+      "description": "Un archivo visual de trabajo desde el estudio."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Cuéntame brevemente qué necesitas. Nueva York · Colombia."
+    }
+  },
+  "pages": {
+    "about": {
+      "philosophyEyebrow": "Filosofía",
+      "practiceEyebrow": "La práctica",
+      "clientsEyebrow": "Casos seleccionados"
+    },
+    "servicesLanding": {
+      "areasEyebrow": "Las tres áreas"
+    },
+    "portfolio": {
+      "eyebrow": "Portafolio",
+      "headline": "Frames seleccionados",
+      "lead": "Un archivo visual de trabajo desde el estudio."
     }
   },
   "home": {

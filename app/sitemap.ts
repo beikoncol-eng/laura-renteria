@@ -1,14 +1,22 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-import { SITE, SERVICE_SLUGS, servicePath } from '@/lib/domain';
+import { SITE, ROUTES, SERVICE_SLUGS, servicePath } from '@/lib/domain';
 
 /**
- * Sitemap — only LIVE routes (home + the three consulting-area pages), each with
- * per-locale hreflang alternates. Pages not yet built are omitted so search
- * engines aren't pointed at 404s.
+ * Sitemap — every LIVE route (home, the primary pages, and the three
+ * consulting-area pages), each with per-locale hreflang alternates. Pages not
+ * yet built are omitted so search engines aren't pointed at 404s.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ['', ...SERVICE_SLUGS.map((slug) => servicePath(slug))];
+  const paths = [
+    '',
+    ROUTES.about,
+    ROUTES.services,
+    ROUTES.work,
+    ROUTES.portfolio,
+    ROUTES.contact,
+    ...SERVICE_SLUGS.map((slug) => servicePath(slug)),
+  ];
   const lastModified = new Date();
 
   const languagesFor = (path: string) =>

@@ -28,6 +28,41 @@
     "home": {
       "title": "Laura Rentería — Brand Strategy, Creative Direction & Image Consulting",
       "description": "Consultant in branding, creative direction and personal brand. I build brands and the people who represent them. New York · Colombia."
+    },
+    "about": {
+      "title": "About",
+      "description": "I work where three things meet: strategy, aesthetics and the person."
+    },
+    "services": {
+      "title": "Services",
+      "description": "Three consulting areas: creative direction, digital marketing and image consulting."
+    },
+    "work": {
+      "title": "Work",
+      "description": "Projects where the brand and the person were built at the same time."
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "A working visual archive from the studio."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Tell me briefly what you need. New York · Colombia."
+    }
+  },
+  "pages": {
+    "about": {
+      "philosophyEyebrow": "Philosophy",
+      "practiceEyebrow": "The practice",
+      "clientsEyebrow": "Selected work"
+    },
+    "servicesLanding": {
+      "areasEyebrow": "The three areas"
+    },
+    "portfolio": {
+      "eyebrow": "Portfolio",
+      "headline": "Selected frames",
+      "lead": "A working visual archive from the studio."
     }
   },
   "home": {

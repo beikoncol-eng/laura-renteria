@@ -9,6 +9,7 @@ export {
   type ImagePlaceholderProps,
 } from './placeholder';
 export { Reveal, type RevealProps } from './reveal';
+export { StaggerText, type StaggerTextProps } from './stagger-text';
 export {
   Accordion,
   type AccordionProps,

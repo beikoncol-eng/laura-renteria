@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Section, Container, Grid } from '@/components/layout';
-import { Reveal, EditorialImage } from '@/components/ui';
+import { Reveal, EditorialImage, Magnetic } from '@/components/ui';
 import { buttonClassName } from '@/components/buttons';
 import { ROUTES } from '@/lib/domain';
 import { MEDIA } from '@/lib/media';
@@ -38,12 +38,14 @@ export function ClosingCta() {
                 {t('body')}
               </p>
               <div className="mt-[var(--space-48)]">
-                <Link
-                  href={ROUTES.contact}
-                  className={buttonClassName('primary', 'md')}
-                >
-                  {t('cta')}
-                </Link>
+                <Magnetic className="inline-block">
+                  <Link
+                    href={ROUTES.contact}
+                    className={buttonClassName('primary', 'md')}
+                  >
+                    {t('cta')}
+                  </Link>
+                </Magnetic>
               </div>
               <p className="font-body text-muted mt-[var(--space-24)] text-[0.875rem]">
                 {t('microcopy')}
