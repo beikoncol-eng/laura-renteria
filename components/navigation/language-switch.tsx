@@ -42,7 +42,7 @@ export function LanguageSwitch({ className }: LanguageSwitchProps) {
               scroll={false}
               aria-current={isActive ? 'true' : undefined}
               className={cn(
-                'font-body text-[0.8125rem] uppercase tracking-label text-current transition-opacity duration-[var(--dur-fast)]',
+                'font-body tracking-label text-[0.8125rem] text-current uppercase transition-opacity duration-[var(--dur-fast)]',
                 isActive
                   ? 'font-medium opacity-100'
                   : 'font-normal opacity-45 hover:opacity-100',

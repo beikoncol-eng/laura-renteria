@@ -3,6 +3,7 @@
 import type { ReactNode } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { usePathname } from '@/i18n/navigation';
+import { EASE, DURATION } from '@/lib/motion';
 
 /**
  * TransitionWrapper — page-to-page transitions (Motion doc: a soft fade, like
@@ -37,8 +38,8 @@ export function TransitionWrapper({ children }: TransitionWrapperProps) {
           filter: reduce ? 'blur(0px)' : 'blur(4px)',
         }}
         transition={{
-          duration: reduce ? 0 : 0.6,
-          ease: [0.16, 1, 0.3, 1],
+          duration: reduce ? 0 : DURATION.base,
+          ease: EASE.luxe,
         }}
       >
         {children}

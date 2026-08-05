@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Section, Container, Grid } from '@/components/layout';
 import { Text } from '@/components/typography';
-import { Reveal, EditorialImage } from '@/components/ui';
+import { Reveal, Sticky, EditorialImage } from '@/components/ui';
 import { MEDIA } from '@/lib/media';
 
 /**
@@ -38,7 +38,7 @@ export function Process() {
 
         <Grid md={12} gap={80} className="items-start">
           <div className="md:col-span-5">
-            <div className="flex flex-col gap-[var(--space-32)] md:sticky md:top-[calc(var(--header-h-desktop)+2rem)]">
+            <Sticky className="flex flex-col gap-[var(--space-32)]">
               <Reveal variant="image">
                 <div className="group relative aspect-[3/4] w-full overflow-hidden">
                   <EditorialImage
@@ -61,7 +61,7 @@ export function Process() {
                   />
                 </div>
               </Reveal>
-            </div>
+            </Sticky>
           </div>
 
           <ol className="md:col-span-6 md:col-start-7">

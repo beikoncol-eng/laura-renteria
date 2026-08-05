@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Stack } from '@/components/layout';
-import { MAIN_NAV } from '@/lib/domain';
+import { PUBLIC_NAV } from '@/lib/domain';
 import { NavLink } from './nav-link';
 
 /**
@@ -16,7 +16,7 @@ export function DesktopNavigation() {
   return (
     <nav aria-label={tA11y('primaryNavigation')} className="hidden md:block">
       <Stack direction="row" gap={32} align="center" as="ul">
-        {MAIN_NAV.map((item) => (
+        {PUBLIC_NAV.map((item) => (
           <li key={item.key}>
             <NavLink href={item.href} className="font-body text-[0.9375rem]">
               {t(item.key)}

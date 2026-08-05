@@ -4,6 +4,7 @@ import { useId, useState, type ReactNode } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Minus, Plus } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { EASE, DURATION } from '@/lib/motion';
 
 /**
  * Accordion — used only where content requires it (FAQ). Container-less: items
@@ -84,8 +85,8 @@ function AccordionRow({
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{
-              duration: reduce ? 0 : 0.32,
-              ease: [0.16, 1, 0.3, 1],
+              duration: reduce ? 0 : DURATION.fast,
+              ease: EASE.luxe,
             }}
             className="overflow-hidden"
           >

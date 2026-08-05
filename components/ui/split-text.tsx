@@ -3,6 +3,7 @@
 import type { ElementType } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { EASE, DURATION, STAGGER, VIEWPORT_ONCE } from '@/lib/motion';
 
 /**
  * SplitText — the shared headline-motion primitive. Splits a string into units
@@ -33,9 +34,6 @@ export interface SplitTextProps {
   blur?: boolean;
 }
 
-const EASE = [0.16, 1, 0.3, 1] as const;
-const VIEWPORT = { once: true, margin: '-10% 0px -10% 0px' } as const;
-
 export function SplitText({
   text,
   as: Tag = 'span',
@@ -50,7 +48,12 @@ export function SplitText({
 
   // Sensible default cadence per split mode.
   const step =
-    stagger ?? (by === 'char' ? 0.018 : by === 'line' ? 0.09 : 0.055);
+    stagger ??
+    (by === 'char'
+      ? STAGGER.char
+      : by === 'line'
+        ? STAGGER.line
+        : STAGGER.word);
 
   if (by === 'line') {
     const lines = text.split('\n');
@@ -66,10 +69,10 @@ export function SplitText({
               className="inline-block will-change-transform"
               initial={reduce ? { opacity: 0 } : { opacity: 0, y: '100%' }}
               whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: '0%' }}
-              viewport={VIEWPORT}
+              viewport={VIEWPORT_ONCE}
               transition={{
-                duration: 0.9,
-                ease: EASE,
+                duration: DURATION.slow,
+                ease: EASE.luxe,
                 delay: delay + (reduce ? 0 : i * step),
               }}
             >
@@ -103,10 +106,10 @@ export function SplitText({
           className="inline-block whitespace-pre will-change-transform"
           initial={hidden}
           whileInView={shown}
-          viewport={VIEWPORT}
+          viewport={VIEWPORT_ONCE}
           transition={{
-            duration: 0.7,
-            ease: EASE,
+            duration: DURATION.base,
+            ease: EASE.luxe,
             delay: delay + (reduce ? 0 : i * step),
           }}
         >

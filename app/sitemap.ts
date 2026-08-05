@@ -8,12 +8,12 @@ import { SITE, ROUTES, SERVICE_SLUGS, servicePath } from '@/lib/domain';
  * yet built are omitted so search engines aren't pointed at 404s.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Work and Portfolio exist as routes but are unpublished (hidden from public
+  // navigation), so they are intentionally excluded from the sitemap.
   const paths = [
     '',
     ROUTES.about,
     ROUTES.services,
-    ROUTES.work,
-    ROUTES.portfolio,
     ROUTES.contact,
     ...SERVICE_SLUGS.map((slug) => servicePath(slug)),
   ];

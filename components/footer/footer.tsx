@@ -3,7 +3,7 @@ import { Container, Grid, Stack } from '@/components/layout';
 import { Label, Caption } from '@/components/typography';
 import { NavLink } from '@/components/navigation';
 import { SocialLinks } from './social-links';
-import { MAIN_NAV, SITE } from '@/lib/domain';
+import { FOOTER_NAV, SITE } from '@/lib/domain';
 
 /**
  * SiteFooter — editorial, minimal, a quiet ending (Layout doc). Opens with the
@@ -32,7 +32,7 @@ export function SiteFooter() {
           <Stack gap={24} as="nav" aria-label={tA11y('footerNavigation')}>
             <Label as="h2">{tFooter('navigation')}</Label>
             <Stack gap={16} as="ul">
-              {MAIN_NAV.map((item) => (
+              {FOOTER_NAV.map((item) => (
                 <li key={item.key}>
                   <NavLink
                     href={item.href}

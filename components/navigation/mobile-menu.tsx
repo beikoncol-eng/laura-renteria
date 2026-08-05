@@ -9,7 +9,7 @@ import { Container } from '@/components/layout';
 import { NavLink } from './nav-link';
 import { buttonClassName } from '@/components/buttons';
 import { useLockBodyScroll } from '@/hooks/use-lock-body-scroll';
-import { MAIN_NAV, CTA_ITEM } from '@/lib/domain';
+import { PUBLIC_NAV, CTA_ITEM } from '@/lib/domain';
 import { cn } from '@/lib/utils';
 
 /**
@@ -114,7 +114,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           animate="visible"
           className="mt-[var(--space-64)] flex flex-col gap-[var(--space-24)]"
         >
-          {MAIN_NAV.map((navItem) => (
+          {PUBLIC_NAV.map((navItem) => (
             <motion.li key={navItem.key} variants={item}>
               <NavLink
                 href={navItem.href}
@@ -127,7 +127,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
           ))}
         </motion.ul>
 
-        <div className="mt-auto pb-[var(--space-48)] pt-[var(--space-48)]">
+        <div className="mt-auto pt-[var(--space-48)] pb-[var(--space-48)]">
           <Link
             href={CTA_ITEM.href}
             onClick={onClose}

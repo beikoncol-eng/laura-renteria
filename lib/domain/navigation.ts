@@ -12,19 +12,34 @@ export interface NavItem {
   /** Message key under the `nav` namespace. */
   key: NavKey;
   href: string;
+  /**
+   * Whether the item is shown in public navigation. Unpublished items keep
+   * their route, page, components and translations — they are simply hidden
+   * from menus, the footer and the sitemap until their content is ready.
+   */
+  published?: boolean;
 }
 
+/**
+ * The full IA. `published: false` marks a route that exists internally but is
+ * not yet linked publicly (Work and Portfolio await finished content).
+ */
 export const MAIN_NAV: readonly NavItem[] = [
-  { key: 'home', href: ROUTES.home },
-  { key: 'about', href: ROUTES.about },
-  { key: 'services', href: ROUTES.services },
-  { key: 'work', href: ROUTES.work },
-  { key: 'portfolio', href: ROUTES.portfolio },
-  { key: 'contact', href: ROUTES.contact },
+  { key: 'home', href: ROUTES.home, published: true },
+  { key: 'about', href: ROUTES.about, published: true },
+  { key: 'services', href: ROUTES.services, published: true },
+  { key: 'work', href: ROUTES.work, published: false },
+  { key: 'portfolio', href: ROUTES.portfolio, published: false },
+  { key: 'contact', href: ROUTES.contact, published: true },
 ] as const;
 
-/** The footer mirrors the primary navigation. */
-export const FOOTER_NAV: readonly NavItem[] = MAIN_NAV;
+/** Only the routes currently linked in public navigation. */
+export const PUBLIC_NAV: readonly NavItem[] = MAIN_NAV.filter(
+  (item) => item.published !== false,
+);
+
+/** The footer mirrors the primary (public) navigation. */
+export const FOOTER_NAV: readonly NavItem[] = PUBLIC_NAV;
 
 /** Primary call-to-action shown in the header and mobile menu. */
 export const CTA_ITEM = { href: ROUTES.contact } as const;

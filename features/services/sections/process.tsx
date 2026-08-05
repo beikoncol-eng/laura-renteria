@@ -1,7 +1,12 @@
 import { useTranslations } from 'next-intl';
 import { Section, Container, Grid } from '@/components/layout';
 import { Text } from '@/components/typography';
-import { Reveal, EditorialImage, ImagePlaceholder } from '@/components/ui';
+import {
+  Reveal,
+  Sticky,
+  EditorialImage,
+  ImagePlaceholder,
+} from '@/components/ui';
 import type { MediaAsset } from '@/lib/media';
 
 /**
@@ -41,18 +46,20 @@ export function ServiceProcess({ craft }: ServiceProcessProps) {
 
         <Grid md={12} gap={64} className="items-start">
           <div className="md:order-2 md:col-span-5 md:col-start-8">
-            <Reveal>
-              <div className="relative aspect-[3/4] w-full overflow-hidden md:sticky md:top-[var(--header-h-desktop)]">
-                {craft ? (
-                  <EditorialImage
-                    asset={craft}
-                    sizes="(max-width: 768px) 100vw, 42vw"
-                  />
-                ) : (
-                  <ImagePlaceholder ratio="3/4" label="Process Image" />
-                )}
-              </div>
-            </Reveal>
+            <Sticky>
+              <Reveal variant="image">
+                <div className="group relative aspect-[3/4] w-full overflow-hidden">
+                  {craft ? (
+                    <EditorialImage
+                      asset={craft}
+                      sizes="(max-width: 768px) 100vw, 42vw"
+                    />
+                  ) : (
+                    <ImagePlaceholder ratio="3/4" label="Process Image" />
+                  )}
+                </div>
+              </Reveal>
+            </Sticky>
           </div>
 
           <ol className="border-line border-l md:order-1 md:col-span-6">

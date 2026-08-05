@@ -3,6 +3,7 @@
 import type { ReactNode } from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { EASE, DURATION, VIEWPORT_ONCE } from '@/lib/motion';
 
 /**
  * Reveal — the shared scroll-entry motion. Two registers:
@@ -54,10 +55,10 @@ export function Reveal({
       variants={variants}
       initial="hidden"
       whileInView="shown"
-      viewport={{ once: true, margin: '-10% 0px -10% 0px' }}
+      viewport={VIEWPORT_ONCE}
       transition={{
-        duration: isImage ? 1.1 : 0.7,
-        ease: [0.16, 1, 0.3, 1],
+        duration: isImage ? DURATION.image : DURATION.base,
+        ease: EASE.luxe,
         delay,
       }}
     >

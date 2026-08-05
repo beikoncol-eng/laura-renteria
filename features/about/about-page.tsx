@@ -261,7 +261,7 @@ function SelectedWork() {
                 {t('placeholder')}
               </Text>
               <Link
-                href={ROUTES.work}
+                href={ROUTES.contact}
                 className="link-underline font-body text-ink mt-[var(--space-32)] inline-block text-[0.95rem]"
               >
                 {t('cta')}
