@@ -16,7 +16,7 @@ export type SectionBackground = 'transparent' | 'paper' | 'cream';
 
 const spacingClass: Record<SectionSpacing, string> = {
   default: 'py-[var(--section-y-mobile)] md:py-[var(--section-y-desktop)]',
-  compact: 'py-[var(--space-96)] md:py-[var(--space-160)]',
+  compact: 'py-[var(--space-64)] md:py-[var(--space-96)]',
   flush: '',
 };
 

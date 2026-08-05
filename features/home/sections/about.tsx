@@ -7,25 +7,24 @@ import { ROUTES } from '@/lib/domain';
 import { MEDIA } from '@/lib/media';
 
 /**
- * 3. About (home, short) — two-column asymmetry: text left, a large editorial
- * portrait right (offset, never centered). Approved copy; builds perspective
- * and trust, not credentials.
+ * 3. About (home, short) — asymmetric: text left, a tall editorial portrait
+ * right, framed on the face. Builds perspective and trust, not credentials.
  */
 export function About() {
   const t = useTranslations('home.about');
   return (
     <Section>
       <Container>
-        <Grid md={12} gap={48} className="items-center">
+        <Grid md={12} gap={64} className="items-center">
           <div className="md:col-span-5">
             <Reveal>
-              <Text variant="label" as="p" className="mb-[var(--space-32)]">
+              <Text variant="label" as="p" className="mb-[var(--space-24)]">
                 {t('eyebrow')}
               </Text>
               <Text as="h2" variant="heading">
                 {t('headline')}
               </Text>
-              <div className="mt-[var(--space-32)] flex max-w-[60ch] flex-col gap-[var(--space-24)]">
+              <div className="mt-[var(--space-32)] flex max-w-[54ch] flex-col gap-[var(--space-24)]">
                 <Text variant="body">{t('lead')}</Text>
                 <Text variant="body" className="text-muted">
                   {t('body1')}
@@ -36,7 +35,9 @@ export function About() {
                 <p className="font-display tracking-display text-ink text-[1.5rem] leading-[1.25]">
                   {t('pull')}
                 </p>
-                <Text variant="body">{t('close')}</Text>
+                <Text variant="body" className="text-muted">
+                  {t('close')}
+                </Text>
               </div>
               <Link
                 href={ROUTES.about}
@@ -48,11 +49,12 @@ export function About() {
           </div>
 
           <div className="md:col-span-6 md:col-start-7">
-            <Reveal>
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <Reveal variant="image">
+              <div className="group relative aspect-[4/5] w-full overflow-hidden">
                 <EditorialImage
                   asset={MEDIA.aboutPortrait}
                   sizes="(max-width: 768px) 100vw, 50vw"
+                  position="50% 22%"
                 />
               </div>
             </Reveal>

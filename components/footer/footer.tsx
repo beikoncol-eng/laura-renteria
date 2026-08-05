@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { Container, Grid, Stack, Divider } from '@/components/layout';
+import { Container, Grid, Stack } from '@/components/layout';
 import { Label, Caption } from '@/components/typography';
 import { NavLink } from '@/components/navigation';
 import { SocialLinks } from './social-links';
@@ -23,11 +23,11 @@ export function SiteFooter() {
       className="border-line border-t pt-[var(--space-96)] pb-[var(--space-64)] md:pt-[var(--space-160)]"
     >
       <Container>
-        <p className="font-display tracking-display text-ink mb-[var(--space-96)] max-w-[24ch] text-[1.75rem] leading-[1.15] text-balance md:text-[2.25rem]">
+        <p className="font-display tracking-display text-ink mb-[var(--space-120)] max-w-[20ch] text-[clamp(2rem,4vw,3.25rem)] leading-[1.1] text-balance">
           {tFooter('closingLine')}
         </p>
 
-        <Grid cols={1} md={4} gap={48}>
+        <Grid cols={1} md={4} gap={64}>
           {/* Navigation */}
           <Stack gap={24} as="nav" aria-label={tA11y('footerNavigation')}>
             <Label as="h2">{tFooter('navigation')}</Label>
@@ -74,7 +74,12 @@ export function SiteFooter() {
           </Stack>
         </Grid>
 
-        <Divider className="mt-[var(--space-80)]" />
+        {/* Signature — the wordmark as the last page of the magazine. */}
+        <div className="mt-[var(--space-120)] overflow-hidden">
+          <p className="font-display text-ink text-[clamp(3rem,13vw,11rem)] leading-[0.9] tracking-[-0.03em]">
+            {SITE.name}
+          </p>
+        </div>
       </Container>
     </footer>
   );

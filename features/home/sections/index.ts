@@ -2,6 +2,7 @@ export { Hero } from './hero';
 export { Manifesto } from './manifesto';
 export { About } from './about';
 export { ServicesOverview } from './services-overview';
+export { EditorialLine } from './editorial-line';
 export { EditorialBreak } from './editorial-break';
 export { Process } from './process';
 export { FeaturedWork } from './featured-work';

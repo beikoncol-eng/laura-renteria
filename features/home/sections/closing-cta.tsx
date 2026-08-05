@@ -7,9 +7,9 @@ import { ROUTES } from '@/lib/domain';
 import { MEDIA } from '@/lib/media';
 
 /**
- * 8. Closing CTA — a calm invitation, not urgency. A large direct-gaze portrait
- * beside a minimal statement, one button, and the honest availability line. The
- * gaze meets the reader at the decision moment.
+ * 8. Closing CTA — a calm invitation. A large direct-gaze portrait beside a
+ * minimal statement, one button, the honest availability line. The gaze meets
+ * the reader at the decision moment.
  */
 export function ClosingCta() {
   const t = useTranslations('home.closing');
@@ -18,11 +18,12 @@ export function ClosingCta() {
       <Container>
         <Grid md={12} gap={64} className="items-center">
           <div className="md:col-span-5">
-            <Reveal>
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <Reveal variant="image">
+              <div className="group relative aspect-[4/5] w-full overflow-hidden">
                 <EditorialImage
                   asset={MEDIA.closingPortrait}
                   sizes="(max-width: 768px) 100vw, 42vw"
+                  position="50% 22%"
                 />
               </div>
             </Reveal>
@@ -30,7 +31,7 @@ export function ClosingCta() {
 
           <div className="md:col-span-6 md:col-start-7">
             <Reveal>
-              <p className="font-display tracking-display text-ink text-[2rem] leading-[1.15] text-balance md:text-[3rem]">
+              <p className="font-display tracking-display text-ink text-[clamp(2rem,3.5vw,3.25rem)] leading-[1.1] text-balance">
                 {t('statement')}
               </p>
               <p className="font-body text-muted mt-[var(--space-32)] max-w-[46ch] leading-[1.7]">

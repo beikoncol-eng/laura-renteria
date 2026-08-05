@@ -1,63 +1,68 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { Text } from '@/components/typography';
-import { Reveal, EditorialImage } from '@/components/ui';
+import { Container } from '@/components/layout';
+import { Reveal, EditorialImage, ParallaxImage } from '@/components/ui';
 import { buttonClassName } from '@/components/buttons';
 import { ROUTES } from '@/lib/domain';
 import { MEDIA } from '@/lib/media';
 
 /**
- * 1. Hero — asymmetric editorial split: a typographic column (paper) beside a
- * full-height portrait. Copy from the approved deck; one text block only, per
- * the art direction. The portrait's gaze leads inward, toward the words.
+ * 1. Hero — an editorial cover. A single full-bleed portrait owns the viewport,
+ * with a subtle scroll parallax and a soft legibility scrim under the type. The
+ * navigation overlays it (transparent → solid on scroll, set by PageWrapper).
+ * Content sits lower-left; one primary action, one quiet secondary link.
  */
 export function Hero() {
   const t = useTranslations('home.hero');
   return (
-    <section className="relative w-full">
-      <div className="grid min-h-[100dvh] grid-cols-1 md:grid-cols-2">
-        <div className="relative order-1 min-h-[58vh] md:order-2 md:min-h-[100dvh]">
-          <EditorialImage
-            asset={MEDIA.heroPortrait}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-          />
+    <section className="bg-cream relative h-[100dvh] w-full overflow-hidden">
+      <ParallaxImage className="absolute inset-0">
+        <EditorialImage
+          asset={MEDIA.heroPortrait}
+          sizes="100vw"
+          position="50% 18%"
+          zoom={false}
+          priority
+        />
+      </ParallaxImage>
+
+      {/* Legibility scrim — lightens the lower frame so ink type stays crisp. */}
+      <div
+        aria-hidden
+        className="from-paper via-paper/30 absolute inset-x-0 bottom-0 h-[70%] bg-linear-to-t to-transparent"
+      />
+
+      <Container className="relative flex h-full flex-col justify-end pb-[var(--space-96)] md:pb-[var(--space-120)]">
+        <div className="max-w-[52rem]">
+          <Reveal>
+            <h1 className="font-display tracking-display text-ink text-[clamp(2.75rem,7vw,6.5rem)] leading-[1.02]">
+              {t('headline')}
+            </h1>
+          </Reveal>
+          <Reveal delay={0.12} className="mt-[var(--space-40)]">
+            <p className="font-body text-muted max-w-[46ch] text-[1.125rem] leading-[1.6] md:text-[1.25rem]">
+              {t('subhead')}
+            </p>
+          </Reveal>
+          <Reveal delay={0.24} className="mt-[var(--space-48)]">
+            <div className="flex flex-wrap items-center gap-[var(--space-48)]">
+              <Link
+                href={ROUTES.contact}
+                className={buttonClassName('primary', 'md')}
+              >
+                {t('primaryCta')}
+              </Link>
+              <Link href={ROUTES.services} className={buttonClassName('text')}>
+                {t('secondaryCta')}
+              </Link>
+            </div>
+          </Reveal>
         </div>
 
-        <div className="order-2 flex flex-col justify-end px-[var(--gutter-mobile)] pt-[var(--space-48)] pb-[var(--space-64)] md:order-1 md:justify-center md:px-[var(--space-96)] md:pt-0 md:pb-0">
-          <div className="max-w-[38rem]">
-            <Reveal>
-              <Text as="h1" variant="display-l">
-                {t('headline')}
-              </Text>
-            </Reveal>
-            <Reveal delay={0.12} className="mt-[var(--space-32)]">
-              <Text variant="body" className="text-muted max-w-[46ch]">
-                {t('subhead')}
-              </Text>
-            </Reveal>
-            <Reveal delay={0.24} className="mt-[var(--space-48)]">
-              <div className="flex flex-wrap items-center gap-[var(--space-24)]">
-                <Link
-                  href={ROUTES.contact}
-                  className={buttonClassName('primary', 'md')}
-                >
-                  {t('primaryCta')}
-                </Link>
-                <Link
-                  href={ROUTES.services}
-                  className={buttonClassName('secondary', 'md')}
-                >
-                  {t('secondaryCta')}
-                </Link>
-              </div>
-              <p className="font-body text-muted mt-[var(--space-24)] text-[0.875rem]">
-                {t('microcopy')}
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </div>
+        <span className="font-body tracking-label text-muted absolute right-[var(--gutter-mobile)] bottom-[var(--space-40)] hidden text-[0.75rem] uppercase md:right-[var(--gutter)] md:block">
+          {t('scroll')}
+        </span>
+      </Container>
     </section>
   );
 }

@@ -36,10 +36,15 @@
       "subhead": "Estrategia de marca, dirección creativa y consultoría de imagen para empresas, fundadores y profesionales que quieren ser recordados.",
       "primaryCta": "Iniciar una conversación",
       "secondaryCta": "Ver servicios",
-      "microcopy": "Respuesta en menos de 48 horas."
+      "microcopy": "Respuesta en menos de 48 horas.",
+      "scroll": "Seguir leyendo"
     },
     "manifesto": {
       "statement": "Todo comunica. Incluso el silencio. Incluso la espera. Incluso lo que decides no mostrar."
+    },
+    "lines": {
+      "a": "Nadie compra lo que no entiende.",
+      "b": "Ser bueno no basta. Hay que ser legible."
     },
     "about": {
       "eyebrow": "Sobre mí",
@@ -50,6 +55,12 @@
       "pull": "Una marca puede tener una estrategia impecable y aún así no funcionar, porque quien la representa no sabe sostenerla.",
       "close": "Por eso hago las dos cosas. Construyo la marca. Y desarrollo a la persona detrás de ella.",
       "cta": "Conocer mi historia"
+    },
+    "services": {
+      "eyebrow": "Qué hago",
+      "headline": "Cómo puedo ayudarte",
+      "subhead": "Puedes trabajar uno solo o los tres juntos. La mayoría de los proyectos empiezan por uno y terminan tocando los otros dos.",
+      "exploreCta": "Ver el servicio completo"
     },
     "process": {
       "eyebrow": "Cómo trabajo",

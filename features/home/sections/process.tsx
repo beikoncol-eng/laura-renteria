@@ -5,9 +5,9 @@ import { Reveal, EditorialImage } from '@/components/ui';
 import { MEDIA } from '@/lib/media';
 
 /**
- * 5. Process ("How I Work") — the five-step method from the approved deck, as an
- * architectural timeline paired with a documentary frame of Laura curating
- * references. The order never changes; the content always does.
+ * 5. Process ("How I Work") — the five-step method. Composition is flipped
+ * against About/Closing (image LEFT, method RIGHT) to break repetition. Premium
+ * hierarchy: large numerals, quiet dividers, generous step spacing.
  */
 interface ProcessStep {
   title: string;
@@ -23,8 +23,8 @@ export function Process() {
   return (
     <Section>
       <Container>
-        <div className="mb-[var(--space-80)] max-w-[46rem]">
-          <Text variant="label" as="p" className="mb-[var(--space-32)]">
+        <div className="mb-[var(--space-64)] max-w-[46rem]">
+          <Text variant="label" as="p" className="mb-[var(--space-24)]">
             {t('eyebrow')}
           </Text>
           <Text as="h2" variant="display-m">
@@ -36,46 +36,51 @@ export function Process() {
         </div>
 
         <Grid md={12} gap={64} className="items-start">
-          <ol className="border-line border-l md:col-span-6">
-            {steps.map((step, index) => (
-              <li
-                key={step.title}
-                className="relative pb-[var(--space-64)] pl-[var(--space-48)] last:pb-0"
-              >
-                <Reveal>
-                  <span className="font-display text-muted block text-[2rem] leading-none md:text-[2.5rem]">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <h3 className="font-display tracking-display text-ink mt-[var(--space-16)] text-[1.5rem] md:text-[1.75rem]">
-                    {step.title}
-                  </h3>
-                  <p className="font-body text-muted mt-[var(--space-16)] max-w-[52ch] leading-[1.7]">
-                    {step.body}
-                  </p>
-                  <p className="font-body text-ink mt-[var(--space-16)] max-w-[52ch] text-[0.9375rem] leading-[1.6]">
-                    <span className="tracking-label text-muted uppercase">
-                      {deliverableLabel}
-                    </span>
-                    &nbsp;&nbsp;{step.deliverable}
-                  </p>
-                </Reveal>
-              </li>
-            ))}
-          </ol>
-
-          <div className="md:col-span-5 md:col-start-8">
-            <Reveal>
-              <div className="relative aspect-[3/4] w-full overflow-hidden md:sticky md:top-[var(--header-h-desktop)]">
+          <div className="md:col-span-5">
+            <Reveal variant="image">
+              <div className="group relative aspect-[3/4] w-full overflow-hidden md:sticky md:top-[calc(var(--header-h-desktop)+2rem)]">
                 <EditorialImage
                   asset={MEDIA.processCuration}
                   sizes="(max-width: 768px) 100vw, 42vw"
+                  position="50% 18%"
                 />
               </div>
             </Reveal>
           </div>
+
+          <ol className="md:col-span-6 md:col-start-7">
+            {steps.map((step, index) => (
+              <li
+                key={step.title}
+                className="border-line border-t py-[var(--space-40)] first:pt-0 last:pb-0"
+              >
+                <Reveal>
+                  <Grid md={12} gap={24} className="items-baseline">
+                    <span className="font-display text-muted text-[2.5rem] leading-none md:col-span-2 md:text-[3rem]">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <div className="md:col-span-10">
+                      <h3 className="font-display tracking-display text-ink text-[1.5rem] md:text-[1.75rem]">
+                        {step.title}
+                      </h3>
+                      <p className="font-body text-muted mt-[var(--space-16)] max-w-[52ch] leading-[1.7]">
+                        {step.body}
+                      </p>
+                      <p className="font-body tracking-label text-muted mt-[var(--space-16)] text-[0.875rem] uppercase">
+                        {deliverableLabel}
+                        <span className="text-ink ml-[var(--space-16)] tracking-normal normal-case">
+                          {step.deliverable}
+                        </span>
+                      </p>
+                    </div>
+                  </Grid>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
         </Grid>
 
-        <Reveal className="mt-[var(--space-64)] max-w-[52ch]">
+        <Reveal className="mt-[var(--space-48)] max-w-[52ch]">
           <p className="font-body text-muted text-[0.9375rem] leading-[1.6]">
             {t('footnote')}
           </p>

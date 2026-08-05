@@ -66,9 +66,9 @@
   --space-240: 15rem;
 
   /* ── Section rhythm ────────────────────────────────────────*/
-  --section-y-desktop: var(--space-240);
-  --section-y-desktop-min: var(--space-160);
-  --section-y-mobile: var(--space-120);
+  --section-y-desktop: 9rem; /* 144 — was 240; RC2 tighter editorial rhythm */
+  --section-y-desktop-min: 6rem; /* 96 */
+  --section-y-mobile: 5rem; /* 80 — was 120 */
 
   /* ── Layout ────────────────────────────────────────────────*/
   --content-max: 1440px; /* max content width */

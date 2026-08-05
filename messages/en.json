@@ -36,10 +36,15 @@
       "subhead": "Brand strategy, creative direction and image consulting for companies, founders and professionals who intend to be remembered.",
       "primaryCta": "Start a conversation",
       "secondaryCta": "See services",
-      "microcopy": "I reply within 48 hours."
+      "microcopy": "I reply within 48 hours.",
+      "scroll": "Keep reading"
     },
     "manifesto": {
       "statement": "Everything communicates. Silence communicates. The wait communicates. So does what you chose not to show."
+    },
+    "lines": {
+      "a": "Nobody buys what they don't understand.",
+      "b": "Being good isn't enough. You have to be legible."
     },
     "about": {
       "eyebrow": "About",
@@ -50,6 +55,12 @@
       "pull": "A brand can have flawless strategy and still fail, because the person representing it can't carry it.",
       "close": "So I do both. I build the brand. And I develop the person behind it.",
       "cta": "Read the full story"
+    },
+    "services": {
+      "eyebrow": "What I do",
+      "headline": "How I can help",
+      "subhead": "You can work on one or all three. Most projects start with one and end up touching the other two.",
+      "exploreCta": "See the full service"
     },
     "process": {
       "eyebrow": "Process",

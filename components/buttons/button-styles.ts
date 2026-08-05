@@ -16,18 +16,19 @@ export type ButtonSize = 'md' | 'sm';
 
 const base =
   'inline-flex items-center justify-center font-body text-[1rem] font-medium ' +
-  'transition-opacity duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] ' +
+  'transition-[opacity,transform] duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] ' +
   'disabled:pointer-events-none disabled:opacity-40';
 
 const sizeClass: Record<ButtonSize, string> = {
-  md: 'h-[var(--button-h)] px-8', // 52px, 20/32 padding rhythm
+  md: 'h-[var(--button-h)] px-9', // 52px, generous horizontal rhythm
   sm: 'h-[var(--touch-min)] px-6', // 44px — minimum touch target
 };
 
 const variantClass: Record<ButtonVariant, string> = {
-  primary: 'rounded-[2px] bg-ink text-paper hover:opacity-90',
+  primary:
+    'rounded-[2px] bg-ink text-paper hover:opacity-90 hover:-translate-y-px',
   secondary:
-    'rounded-[2px] border border-ink/25 bg-transparent text-ink hover:opacity-70',
+    'rounded-[2px] border border-ink/25 bg-transparent text-ink hover:opacity-70 hover:-translate-y-px',
   text: 'link-underline px-0 text-ink hover:opacity-100',
 };
 
