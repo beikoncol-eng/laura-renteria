@@ -31,15 +31,17 @@ export function Contact() {
                 {t('headline')}
               </Text>
 
-              <form className="flex flex-col gap-[var(--space-40)]" noValidate>
-                <div className="grid gap-[var(--space-40)] md:grid-cols-2">
+              <form className="flex flex-col gap-[var(--space-48)]" noValidate>
+                <div className="grid gap-[var(--space-48)] md:grid-cols-2">
                   <Input
+                    variant="underline"
                     label={tForm('name')}
                     name="name"
                     autoComplete="name"
                     placeholder={tForm('namePlaceholder')}
                   />
                   <Input
+                    variant="underline"
                     label={tForm('email')}
                     name="email"
                     type="email"
@@ -48,6 +50,7 @@ export function Contact() {
                   />
                 </div>
                 <Textarea
+                  variant="underline"
                   label={tForm('message')}
                   name="message"
                   placeholder={tForm('messagePlaceholder')}
@@ -73,7 +76,7 @@ export function Contact() {
                     </Text>
                     <a
                       href={`mailto:${t('email')}`}
-                      className="link-underline font-display tracking-display text-ink w-fit text-[1.25rem]"
+                      className="link-underline font-display tracking-display text-ink w-fit text-[clamp(1.5rem,2.4vw,2rem)] leading-tight"
                     >
                       {t('email')}
                     </a>

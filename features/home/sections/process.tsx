@@ -5,10 +5,10 @@ import { Reveal, EditorialImage } from '@/components/ui';
 import { MEDIA } from '@/lib/media';
 
 /**
- * 5. Process ("How I Work") — the five-step method. The visual side is a
- * two-frame editorial composition (curation + moodboard) that stays with the
- * reader as the method scrolls, so the column never feels empty. Composition is
- * image-left / method-right to break the rhythm.
+ * 5. Process ("How I Work") — the five-step method beside an editorial image
+ * spread: a large portrait with a smaller frame floating over its lower edge
+ * (different scales, offset, a paper gutter between them) for tension. The pair
+ * stays with the reader as the method scrolls; the column never feels empty.
  */
 interface ProcessStep {
   title: string;
@@ -38,29 +38,31 @@ export function Process() {
 
         <Grid md={12} gap={80} className="items-start">
           <div className="md:col-span-5">
-            <div className="flex flex-col gap-[var(--space-32)] md:sticky md:top-[calc(var(--header-h-desktop)+2rem)]">
-              <Reveal variant="image">
-                <div className="group relative aspect-[3/4] w-full overflow-hidden">
-                  <EditorialImage
-                    asset={MEDIA.processCuration}
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                    position="50% 12%"
-                  />
-                </div>
-              </Reveal>
-              <Reveal
-                variant="image"
-                delay={0.1}
-                className="ml-[var(--space-64)]"
-              >
-                <div className="group relative aspect-[4/5] w-full overflow-hidden">
-                  <EditorialImage
-                    asset={MEDIA.creativeDirectionCraft}
-                    sizes="(max-width: 768px) 100vw, 32vw"
-                    position="50% 20%"
-                  />
-                </div>
-              </Reveal>
+            <div className="md:sticky md:top-[calc(var(--header-h-desktop)+2rem)]">
+              <div className="relative flex flex-col gap-[var(--space-32)] md:block md:pb-[var(--space-96)]">
+                <Reveal variant="image">
+                  <div className="group relative aspect-[3/4] w-full overflow-hidden">
+                    <EditorialImage
+                      asset={MEDIA.processCuration}
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      position="50% 10%"
+                    />
+                  </div>
+                </Reveal>
+                <Reveal
+                  variant="image"
+                  delay={0.12}
+                  className="md:absolute md:-right-[8%] md:bottom-0 md:w-[60%]"
+                >
+                  <div className="group md:ring-paper relative aspect-[4/5] w-full overflow-hidden md:ring-8">
+                    <EditorialImage
+                      asset={MEDIA.creativeDirectionCraft}
+                      sizes="(max-width: 768px) 100vw, 26vw"
+                      position="50% 18%"
+                    />
+                  </div>
+                </Reveal>
+              </div>
             </div>
           </div>
 
@@ -96,7 +98,7 @@ export function Process() {
           </ol>
         </Grid>
 
-        <Reveal className="mt-[var(--space-48)] max-w-[52ch]">
+        <Reveal className="mt-[var(--space-64)] max-w-[52ch]">
           <p className="font-body text-muted text-[0.9375rem] leading-[1.6]">
             {t('footnote')}
           </p>

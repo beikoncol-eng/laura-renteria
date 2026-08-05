@@ -50,27 +50,24 @@ export function ServicesOverview() {
                   className="group border-line block border-b py-[var(--space-64)]"
                 >
                   <Grid md={12} gap={32} className="items-baseline">
-                    <div className="flex items-baseline gap-[var(--space-24)] md:col-span-7">
+                    <div className="flex items-baseline gap-[var(--space-24)] md:col-span-8">
                       <span className="font-display text-muted text-[1.125rem]">
                         {String(index + 1).padStart(2, '0')}
                       </span>
-                      <h3 className="font-display tracking-display text-ink flex items-center gap-[var(--space-24)] text-[clamp(2.5rem,6vw,5rem)] leading-[0.98] transition-transform duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-[0.4rem]">
+                      <h3 className="font-display tracking-display text-ink flex items-center gap-[var(--space-32)] text-[clamp(2.75rem,7vw,6.25rem)] leading-[0.95] transition-transform duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-[0.5rem]">
                         {humanizeSlug(area.slug)}
                         <ArrowUpRight
-                          className="hidden shrink-0 -translate-x-2 opacity-0 transition-all duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0 group-hover:opacity-100 md:block"
-                          size={40}
+                          className="hidden shrink-0 -translate-x-3 opacity-0 transition-all duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-0 group-hover:opacity-100 md:block"
+                          size={48}
                           strokeWidth={1}
                           aria-hidden
                         />
                       </h3>
                     </div>
-                    <div className="md:col-span-4 md:col-start-9">
-                      <Text variant="body" className="text-muted">
+                    <div className="md:col-span-3 md:col-start-10 md:self-center">
+                      <p className="font-body text-muted text-[0.9375rem] leading-[1.6]">
                         {copy.tagline}
-                      </Text>
-                      <span className="link-underline font-body text-ink mt-[var(--space-24)] inline-block text-[0.95rem]">
-                        {t('exploreCta')}
-                      </span>
+                      </p>
                     </div>
                   </Grid>
                 </Link>
