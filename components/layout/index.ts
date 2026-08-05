@@ -26,3 +26,8 @@ export { SiteHeader, type SiteHeaderProps } from './header';
 export { Logo, type LogoProps } from './logo';
 export { Main, MAIN_CONTENT_ID, type MainProps } from './main';
 export { SkipToContent } from './skip-to-content';
+export {
+  TransitionWrapper,
+  type TransitionWrapperProps,
+} from './transition-wrapper';
+export { JsonLd, type JsonLdProps } from './json-ld';

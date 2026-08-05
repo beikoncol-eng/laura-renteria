@@ -8,7 +8,8 @@ import { X } from 'lucide-react';
 import { Container } from '@/components/layout';
 import { NavLink } from './nav-link';
 import { buttonClassName } from '@/components/buttons';
-import { MAIN_NAV, CTA_ITEM } from '@/lib/navigation';
+import { useLockBodyScroll } from '@/hooks/use-lock-body-scroll';
+import { MAIN_NAV, CTA_ITEM } from '@/lib/domain';
 import { cn } from '@/lib/utils';
 
 /**
@@ -33,6 +34,9 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
   const reduce = useReducedMotion();
   const panelRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
+
+  // Lock background scroll while the full-screen menu is open.
+  useLockBodyScroll(true);
 
   useEffect(() => {
     closeRef.current?.focus();

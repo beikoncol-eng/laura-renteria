@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Stack } from '@/components/layout';
-import { MAIN_NAV } from '@/lib/navigation';
+import { MAIN_NAV } from '@/lib/domain';
 import { NavLink } from './nav-link';
 
 /**

@@ -4,6 +4,7 @@ import { SiteFooter } from '@/components/footer';
 import { SkipToContent } from './skip-to-content';
 import { SiteHeader } from './header';
 import { Main } from './main';
+import { TransitionWrapper } from './transition-wrapper';
 
 /**
  * PageWrapper — the application shell.
@@ -36,7 +37,7 @@ export function PageWrapper({
             'pt-[var(--header-h-mobile)] md:pt-[var(--header-h-desktop)]',
         )}
       >
-        {children}
+        <TransitionWrapper>{children}</TransitionWrapper>
       </Main>
       <SiteFooter />
     </>

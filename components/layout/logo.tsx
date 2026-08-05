@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import { SITE } from '@/lib/site';
+import { SITE } from '@/lib/domain';
 
 /**
  * Logo — theme-safe editorial wordmark.

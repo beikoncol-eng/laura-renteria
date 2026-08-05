@@ -1,21 +1,16 @@
 /**
- * Service taxonomy — canonical source of truth for Laura's offering.
+ * Service model — the heart of the business domain.
  *
- * POSITIONING (supersedes the earlier eleven-service / territory model):
- * the business is THREE consulting areas. Each area is a primary service with
- * its own page; the specialized capabilities are presented only as "what's
- * included" within an area — they are NOT separate pages or routes.
+ * The business exposes THREE consulting areas. Each area contains a collection
+ * of CAPABILITIES (never "subservices"): capabilities only explain what an area
+ * includes — the website sells the areas, not the capabilities. Capabilities
+ * are not routed and have no pages of their own.
  *
- * Hierarchy is always: consulting area first, capabilities second. Every
- * consumer (Home blocks, Services page, service detail pages, navigation, the
- * three photographic worlds) reads structure from here.
- *
- * STRUCTURE ONLY. Names, descriptions, capability labels, and section copy
- * resolve at render time from the `services` / `capabilities` message
- * namespaces or the CMS. No copy lives in this module.
+ * Structure only. All labels/descriptions/section copy resolve from
+ * messages/CMS via the key helpers below.
  */
 
-/* ── Consulting areas (primary services) ─────────────────────────────────── */
+/* ── Consulting areas ────────────────────────────────────────────────────── */
 
 export const SERVICE_SLUGS = [
   'creative-direction',
@@ -28,10 +23,10 @@ export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 /* ── Capabilities ("what's included") ────────────────────────────────────── */
 
 /**
- * Every distinct capability, deduplicated. Some capabilities intentionally
- * appear under more than one area (e.g. Content Strategy in both Creative
- * Direction and Digital Marketing); the registry keeps one label per slug,
- * while each area lists its own ordered subset below.
+ * Every distinct capability, deduplicated. Some intentionally belong to more
+ * than one area (e.g. Content Strategy in Creative Direction and Digital
+ * Marketing); the registry stores one label per slug, each area lists its own
+ * ordered subset below.
  */
 export const CAPABILITY_SLUGS = [
   // Creative Direction
@@ -62,20 +57,17 @@ export const CAPABILITY_SLUGS = [
 
 export type CapabilitySlug = (typeof CAPABILITY_SLUGS)[number];
 
-export interface Service {
+export interface ServiceArea {
   slug: ServiceSlug;
   /** Ordered capabilities shown under this area's "what's included". */
-  includes: CapabilitySlug[];
+  capabilities: CapabilitySlug[];
 }
 
-/**
- * The single ordered definition. Order drives display order everywhere:
- * on the Services page, in Home blocks, and in any grouped navigation.
- */
-export const SERVICES: readonly Service[] = [
+/** The single ordered definition. Order drives display order everywhere. */
+export const SERVICE_AREAS: readonly ServiceArea[] = [
   {
     slug: 'creative-direction',
-    includes: [
+    capabilities: [
       'brand-strategy',
       'branding',
       'creative-direction',
@@ -87,7 +79,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     slug: 'digital-marketing',
-    includes: [
+    capabilities: [
       'marketing-strategy',
       'social-media-strategy',
       'content-strategy',
@@ -100,7 +92,7 @@ export const SERVICES: readonly Service[] = [
   },
   {
     slug: 'image-consulting',
-    includes: [
+    capabilities: [
       'image-consulting',
       'personal-branding',
       'presence-communication',
@@ -113,8 +105,8 @@ export const SERVICES: readonly Service[] = [
 ] as const;
 
 /**
- * Canonical section order for a service detail page. Kept here so page
- * scaffolding and any in-page navigation stay consistent with the spec.
+ * Canonical section order for a consulting-area page. Kept here so page
+ * scaffolding and in-page navigation stay consistent with the spec.
  */
 export const SERVICE_SECTIONS = [
   'overview',
@@ -128,16 +120,14 @@ export const SERVICE_SECTIONS = [
 
 export type ServiceSection = (typeof SERVICE_SECTIONS)[number];
 
-/* ── Derived lookups ─────────────────────────────────────────────────────── */
+/* ── Derived lookups + guards ────────────────────────────────────────────── */
 
-const SERVICE_BY_SLUG: Record<ServiceSlug, Service> = Object.fromEntries(
-  SERVICES.map((service) => [service.slug, service]),
-) as Record<ServiceSlug, Service>;
+const AREA_BY_SLUG: Record<ServiceSlug, ServiceArea> = Object.fromEntries(
+  SERVICE_AREAS.map((area) => [area.slug, area]),
+) as Record<ServiceSlug, ServiceArea>;
 
-/* ── Helpers ─────────────────────────────────────────────────────────────── */
-
-export function getService(slug: ServiceSlug): Service {
-  return SERVICE_BY_SLUG[slug];
+export function getServiceArea(slug: ServiceSlug): ServiceArea {
+  return AREA_BY_SLUG[slug];
 }
 
 export function isServiceSlug(value: string): value is ServiceSlug {
@@ -147,16 +137,6 @@ export function isServiceSlug(value: string): value is ServiceSlug {
 export function isCapabilitySlug(value: string): value is CapabilitySlug {
   return (CAPABILITY_SLUGS as readonly string[]).includes(value);
 }
-
-/* ── Routes ──────────────────────────────────────────────────────────────── */
-
-/** Route to a consulting-area page (next-intl adds the locale prefix). */
-export function servicePath(slug: ServiceSlug): string {
-  return `/services/${slug}`;
-}
-
-/** The Services page is the single gateway to the three consulting areas. */
-export const SERVICES_INDEX_PATH = '/services' as const;
 
 /* ── Message-key helpers ─────────────────────────────────────────────────── */
 

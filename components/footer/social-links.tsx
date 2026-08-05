@@ -2,18 +2,19 @@ import { Instagram, Linkedin, type LucideIcon } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import {
   SOCIAL_LINKS,
+  SOCIAL_NETWORKS,
   type SocialLink,
-  type SocialPlatform,
-} from '@/lib/social';
+  type SocialNetwork,
+} from '@/lib/domain';
 import { cn } from '@/lib/utils';
 
 /**
  * SocialLinks — line icons only (24px, single stroke), never filled or colorful.
  * Prop-driven so real profile URLs from the CMS replace the placeholder hrefs
- * without markup changes. External links open safely; placeholder ('#') links
- * stay in-tab.
+ * without markup changes. Labels come from the network registry; external links
+ * open safely; placeholder ('#') links stay in-tab.
  */
-const ICONS: Record<SocialPlatform, LucideIcon> = {
+const ICONS: Record<SocialNetwork, LucideIcon> = {
   instagram: Instagram,
   linkedin: Linkedin,
 };
@@ -36,13 +37,14 @@ export function SocialLinks({
       className={cn('flex items-center gap-[var(--space-24)]', className)}
     >
       {links.map((link) => {
-        const Icon = ICONS[link.platform];
+        const Icon = ICONS[link.network];
+        const label = SOCIAL_NETWORKS[link.network].label;
         const external = link.href.startsWith('http');
         return (
-          <li key={link.platform}>
+          <li key={link.network}>
             <a
               href={link.href}
-              aria-label={link.label}
+              aria-label={label}
               {...(external
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}

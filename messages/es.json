@@ -5,31 +5,296 @@
     "footerNavigation": "Pie de página",
     "socialNavigation": "Redes sociales",
     "homeLink": "Laura Rentería — Inicio",
-    "openMenu": "Abrir menú",
-    "closeMenu": "Cerrar menú"
+    "openMenu": "Menú",
+    "closeMenu": "Cerrar"
   },
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
     "services": "Servicios",
-    "work": "Trabajo",
+    "work": "Casos",
     "portfolio": "Portafolio",
     "contact": "Contacto"
   },
   "cta": {
-    "label": "Contacto"
+    "label": "Trabajemos juntas"
   },
   "language": {
     "label": "Idioma",
     "en": "EN",
     "es": "ES"
   },
+  "seo": {
+    "home": {
+      "title": "Laura Rentería — Estrategia de marca, dirección creativa e imagen",
+      "description": "Consultora en branding, dirección creativa y marca personal. Construyo marcas y desarrollo a las personas que las representan. Nueva York · Colombia."
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "Construyo marcas. Y a las personas que las representan.",
+      "subhead": "Estrategia de marca, dirección creativa y consultoría de imagen para empresas, fundadores y profesionales que quieren ser recordados.",
+      "primaryCta": "Iniciar una conversación",
+      "secondaryCta": "Ver servicios",
+      "microcopy": "Respuesta en menos de 48 horas."
+    },
+    "manifesto": {
+      "statement": "Todo comunica. Incluso el silencio. Incluso la espera. Incluso lo que decides no mostrar."
+    },
+    "about": {
+      "eyebrow": "Sobre mí",
+      "headline": "Soy Laura Rentería.",
+      "lead": "Trabajo en el punto donde se cruzan tres cosas: la estrategia, la estética y la persona.",
+      "body1": "Mi formación combina comunicación social, marketing y publicidad, asesoría de imagen y relaciones públicas en moda. Mi trabajo ha sido estrategia digital, dirección creativa, producción de contenido, branding y experiencias de marca en industrias muy distintas entre sí.",
+      "body2": "En 2018 fundé Renace Fashion Studio. Durante años acompañé a modelos, emprendedores y profesionales a desarrollar su imagen y su forma de comunicar. Ahí entendí algo que hoy define cómo trabajo:",
+      "pull": "Una marca puede tener una estrategia impecable y aún así no funcionar, porque quien la representa no sabe sostenerla.",
+      "close": "Por eso hago las dos cosas. Construyo la marca. Y desarrollo a la persona detrás de ella.",
+      "cta": "Conocer mi historia"
+    },
+    "process": {
+      "eyebrow": "Cómo trabajo",
+      "headline": "Un método, no una fórmula",
+      "subhead": "El orden es siempre el mismo. El contenido nunca.",
+      "footnote": "Todo proyecto empieza con una conversación de diagnóstico. Sin ella no acepto trabajos, porque no sabría qué estoy resolviendo.",
+      "deliverableLabel": "Qué obtienes",
+      "steps": [
+        {
+          "title": "Escuchar",
+          "body": "Empezamos con una conversación larga. No un brief de formulario: una conversación real donde entiendo el negocio, el momento, lo que funciona, lo que incomoda y lo que llevas tiempo sin poder nombrar.",
+          "deliverable": "Una sesión de diagnóstico y un documento con lo que encontré."
+        },
+        {
+          "title": "Diagnosticar",
+          "body": "Reviso lo que existe: la marca, la competencia, el contenido, la percepción actual, la presencia de quien la representa. Aquí es donde suelen aparecer las incoherencias que nadie había mirado de frente.",
+          "deliverable": "Auditoría de marca y de presencia, con prioridades claras."
+        },
+        {
+          "title": "Definir",
+          "body": "Se toman las decisiones difíciles. Posicionamiento, territorio, audiencia, tono, dirección visual. Menos opciones, más criterio.",
+          "deliverable": "Plataforma de marca y dirección creativa."
+        },
+        {
+          "title": "Construir",
+          "body": "Se ejecuta. Identidad, contenido, campañas, guiones, experiencias, guardarropa, entrenamiento de presencia. Lo que el proyecto necesite, en el orden que tenga sentido.",
+          "deliverable": "Los entregables definidos en el alcance."
+        },
+        {
+          "title": "Acompañar",
+          "body": "La marca sale al mundo y ahí empieza lo interesante. Ajustamos, medimos, corregimos. Nada nace terminado.",
+          "deliverable": "Seguimiento durante el periodo acordado."
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "Casos",
+      "headline": "Trabajo en detalle",
+      "subhead": "Proyectos donde la marca y la persona se construyeron a la vez.",
+      "placeholder": "Los casos se publican con autorización de cada cliente. Algunos proyectos se trabajan bajo confidencialidad y no aparecen aquí. Si quieres ver trabajo relacionado con tu sector, escríbeme y te lo comparto en privado.",
+      "cta": "Escríbeme"
+    },
+    "faq": {
+      "eyebrow": "Preguntas frecuentes",
+      "headline": "Antes de escribirme",
+      "items": [
+        {
+          "q": "¿Con qué tipo de clientes trabajas?",
+          "a": "Con empresas que necesitan claridad de marca, con fundadores que se han convertido en la cara de su negocio y con profesionales que quieren construir una posición propia. He trabajado en moda, belleza, hospitalidad, vida nocturna y servicios. El sector importa menos que el momento: funciona mejor cuando hay algo real que ordenar."
+        },
+        {
+          "q": "¿Trabajas solo con marcas grandes?",
+          "a": "No. Trabajo con proyectos que están empezando y con marcas que llevan años. Lo que sí necesito es que haya disposición a tomar decisiones. Los proyectos que no avanzan casi nunca es por presupuesto: es por indecisión."
+        },
+        {
+          "q": "¿Cuánto dura un proyecto?",
+          "a": "Una consultoría 1:1 se resuelve en una sesión. Un proyecto de branding suele tomar entre seis y diez semanas. Un acompañamiento de marca personal o presencia funciona mejor en ciclos de tres meses."
+        },
+        {
+          "q": "¿Trabajas de forma presencial o remota?",
+          "a": "Ambas. Trabajo entre Nueva York y Colombia, y llevo proyectos en remoto sin problema. Para producción, dirección en set y entrenamiento de presencia, lo presencial cambia mucho el resultado."
+        },
+        {
+          "q": "¿Qué pasa si no estoy segura de qué necesito?",
+          "a": "Es la situación más común. Para eso existe la conversación de diagnóstico: sales de ahí sabiendo qué te hace falta, trabajes conmigo o no."
+        }
+      ]
+    },
+    "closing": {
+      "statement": "Hablemos de lo que estás construyendo.",
+      "body": "Cuéntame en qué estás. Si puedo ayudarte, te lo digo. Si no, también, y te digo quién sí.",
+      "cta": "Iniciar una conversación",
+      "microcopy": "Trabajo con un número limitado de proyectos por trimestre."
+    }
+  },
+  "services": {
+    "sections": {
+      "overview": "Resumen",
+      "whoItsFor": "Para quién es",
+      "capabilities": "Qué incluye",
+      "process": "Cómo trabajo",
+      "faq": "Preguntas frecuentes"
+    },
+    "cta": {
+      "statement": "¿No sabes cuál necesitas?",
+      "body": "Es lo más normal. Escríbeme y lo definimos en la primera conversación.",
+      "button": "Iniciar una conversación"
+    },
+    "areas": {
+      "creative-direction": {
+        "tagline": "Definir quién eres antes de decidir cómo te ves.",
+        "overview": "Posicionamiento, identidad, arquitectura de marca, dirección creativa y todo lo que hace que una marca se reconozca sin necesidad de firmar.",
+        "who": [
+          "Marcas que están naciendo, marcas que crecieron sin rumbo definido, o marcas que ya no se parecen a lo que dicen ser.",
+          "Proyectos nuevos y marcas existentes que necesitan una identidad que corresponda a lo que ya son.",
+          "Marcas que necesitan una campaña, un lanzamiento, un cambio de imagen o simplemente contenido que se vea a la altura de lo que venden."
+        ]
+      },
+      "digital-marketing": {
+        "tagline": "Traducir la estrategia en algo que la gente vea, entienda y recuerde.",
+        "overview": "Contenido con criterio, no contenido por volumen. Definir dónde estar, con qué frecuencia y con qué mensaje, en función de lo que el negocio necesita este año.",
+        "who": [
+          "Negocios que están invirtiendo en marketing sin claridad sobre qué está funcionando.",
+          "Marcas y profesionales cuyo perfil no está a la altura de la calidad de su trabajo.",
+          "Equipos y fundadores que producen mucho y conectan poco."
+        ]
+      },
+      "image-consulting": {
+        "tagline": "Cómo te ves, cómo hablas, cómo apareces y cómo te recuerdan cuando sales de la sala.",
+        "overviewHeadline": "No se trata de vestir mejor.",
+        "overviewSubhead": "Se trata de que la impresión que dejas corresponda a lo que sabes hacer.",
+        "overview": "La mayoría de las asesorías de imagen terminan en el clóset. Esta empieza ahí. Porque la ropa es apenas la primera capa. Después viene cómo entras a una sala. Cómo te paras cuando alguien te habla. Qué haces con las manos frente a una cámara. Cómo cuentas tu historia en treinta segundos sin sonar a currículum. Todo eso se puede trabajar. Y todo eso decide si te toman en serio.",
+        "who": [
+          "Fundadores que se convirtieron en la cara de su negocio.",
+          "Profesionales que necesitan visibilidad para crecer.",
+          "Personas que van a aparecer en medios, escenarios o cámara.",
+          "Equipos directivos que representan a una empresa.",
+          "Talento y modelos que están construyendo carrera."
+        ]
+      }
+    },
+    "capabilities": {
+      "brand-strategy": {
+        "description": "Definir quién eres antes de decidir cómo te ves.",
+        "supporting": "Es el trabajo que va antes del diseño y del contenido."
+      },
+      "branding": {
+        "description": "Traducir la estrategia en algo que se pueda ver.",
+        "supporting": "La identidad no es el logo."
+      },
+      "creative-direction": {
+        "description": "El criterio detrás de todo lo que la marca muestra.",
+        "supporting": "Dirijo el concepto, la estética y la ejecución de campañas, sesiones y piezas audiovisuales."
+      },
+      "content-strategy": {
+        "description": "Contenido que responde a una intención.",
+        "supporting": "De la idea al guion, del guion al set, del set a la publicación."
+      },
+      "brand-experience": {
+        "description": "Que la marca también se viva.",
+        "supporting": "Lanzamientos, activaciones, eventos y espacios donde la marca deja de ser una imagen y pasa a ser una experiencia."
+      },
+      "campaign-direction": {
+        "description": "Una sola idea, sostenida en cada pieza.",
+        "supporting": "Defino el concepto y el hilo conductor, y dirijo cómo se despliega en canales, formatos y momentos."
+      },
+      "art-direction": {
+        "description": "Cómo se ve, y por qué se ve así.",
+        "supporting": "Defino el lenguaje visual de una pieza —referencia, composición, styling, color— y lo sostengo desde el moodboard hasta la entrega final."
+      },
+      "marketing-strategy": {
+        "description": "Un plan que responda a un objetivo, no a una moda.",
+        "supporting": "Definir dónde estar, con qué frecuencia y con qué mensaje, en función de lo que el negocio necesita este año."
+      },
+      "social-media-strategy": {
+        "description": "Redes con criterio editorial, no con calendario relleno.",
+        "supporting": "El objetivo no es publicar más. Es que lo que publicas construya algo."
+      },
+      "website-strategy": {
+        "description": "Definir para qué sirve el sitio antes de decidir cómo se ve.",
+        "supporting": "Estructura, jerarquía de mensajes y el recorrido de quien llega, definidos para que el sitio venda y no solo muestre."
+      },
+      "website-design-development": {
+        "description": "El sitio construido como se planeó.",
+        "supporting": "Diseño y desarrollo de las páginas que cargan la marca, desde el sistema visual hasta una entrega responsive y funcional."
+      },
+      "landing-pages": {
+        "description": "Una página, una decisión.",
+        "supporting": "Una página enfocada en una sola acción —un lanzamiento, una campaña, una oferta— sin nada que no sirva a esa acción."
+      },
+      "customer-journey-strategy": {
+        "description": "El recorrido de desconocido a cliente, mapeado.",
+        "supporting": "Cada etapa por la que pasa una persona, y el mensaje, el canal y el momento que la llevan a la siguiente."
+      },
+      "analytics-performance-optimization": {
+        "description": "Leer lo que pasó y decidir qué cambiar.",
+        "supporting": "Los números que importan, revisados con un ritmo fijo y convertidos en decisiones, no en tableros que nadie abre."
+      },
+      "image-consulting": {
+        "description": "Cómo te ves, cómo te mueves y cómo te recuerdan.",
+        "supporting": "Es el trabajo completo sobre la impresión que dejas."
+      },
+      "personal-branding": {
+        "description": "Construir una posición propia, no un perfil bonito.",
+        "supporting": "Trabajo la marca personal como se trabaja una marca comercial: con estrategia, con territorio y con criterio estético."
+      },
+      "presence-communication": {
+        "description": "Aprender a aparecer.",
+        "supporting": "La presencia no es carisma: es técnica."
+      },
+      "executive-presence": {
+        "description": "Cómo sostienes una sala que no organizaste tú.",
+        "supporting": "Porte, tono y mando para las reuniones, escenarios y negociaciones donde la sala ya te está mirando."
+      },
+      "wardrobe-strategy": {
+        "description": "Un guardarropa que funciona, no uno que está lleno.",
+        "supporting": "Auditamos lo que tienes, lo editamos y armamos un plan de qué usar por contexto —oficina, evento, prensa, cámara."
+      },
+      "personal-positioning": {
+        "description": "El lugar que ocupas en la mente de los demás.",
+        "supporting": "Definir por qué quieres que te conozcan, y ante quién, antes de cualquier contenido, publicación o aparición."
+      },
+      "visual-identity-for-professionals": {
+        "description": "Un sistema de imagen personal, no un look de una vez.",
+        "supporting": "Color, estilo, fotografía y los detalles que te hacen reconocible en todos los contextos donde apareces."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "headline": "Escríbeme",
+    "subhead": "Cuéntame brevemente qué necesitas. Te respondo personalmente en menos de 48 horas.",
+    "sideCopy": "Si prefieres, podemos empezar por una llamada corta de quince minutos para ver si tiene sentido trabajar juntas.",
+    "email": "hola@laurarenteria.com",
+    "emailLabel": "Correo",
+    "locationLabel": "Ubicación",
+    "location": "Nueva York · Colombia",
+    "socialLabel": "Redes",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "nombre@correo.com",
+      "message": "Cuéntame más",
+      "messagePlaceholder": "¿Qué estás construyendo y qué te tiene atascada?",
+      "submit": "Enviar mensaje"
+    }
+  },
   "footer": {
+    "closingLine": "Tu marca empieza mucho antes de que hables.",
     "navigation": "Navegación",
     "contact": "Contacto",
     "social": "Redes",
     "legal": "Legal",
-    "rights": "Todos los derechos reservados",
-    "contactPending": "Detalles de contacto pendientes."
-  }
+    "rights": "Todos los derechos reservados"
+  },
+  "notFound": {
+    "title": "Esta página no existe.",
+    "body": "Puede que el enlace haya cambiado. Volvamos al principio.",
+    "cta": "Ir al inicio"
+  },
+  "error": {
+    "title": "Algo se rompió de nuestro lado.",
+    "body": "Estamos en ello. Si necesitas algo urgente, escríbeme a",
+    "cta": "Intentar de nuevo"
+  },
+  "loading": "Un momento…"
 }

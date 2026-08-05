@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import { useScrolled } from '@/hooks/use-scrolled';
-import { CTA_ITEM } from '@/lib/navigation';
+import { CTA_ITEM } from '@/lib/domain';
 import { buttonClassName } from '@/components/buttons';
 import {
   DesktopNavigation,

@@ -5,8 +5,8 @@
     "footerNavigation": "Footer",
     "socialNavigation": "Social media",
     "homeLink": "Laura Rentería — Home",
-    "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "openMenu": "Menu",
+    "closeMenu": "Close"
   },
   "nav": {
     "home": "Home",
@@ -17,19 +17,284 @@
     "contact": "Contact"
   },
   "cta": {
-    "label": "Contact"
+    "label": "Work with me"
   },
   "language": {
     "label": "Language",
     "en": "EN",
     "es": "ES"
   },
+  "seo": {
+    "home": {
+      "title": "Laura Rentería — Brand Strategy, Creative Direction & Image Consulting",
+      "description": "Consultant in branding, creative direction and personal brand. I build brands and the people who represent them. New York · Colombia."
+    }
+  },
+  "home": {
+    "hero": {
+      "headline": "I build brands. And the people who represent them.",
+      "subhead": "Brand strategy, creative direction and image consulting for companies, founders and professionals who intend to be remembered.",
+      "primaryCta": "Start a conversation",
+      "secondaryCta": "See services",
+      "microcopy": "I reply within 48 hours."
+    },
+    "manifesto": {
+      "statement": "Everything communicates. Silence communicates. The wait communicates. So does what you chose not to show."
+    },
+    "about": {
+      "eyebrow": "About",
+      "headline": "I'm Laura Rentería.",
+      "lead": "I work where three things meet: strategy, aesthetics and the person.",
+      "body1": "My background combines communications, marketing and advertising, image consulting and fashion PR. My work has been digital strategy, creative direction, content production, branding and brand experience across industries that have very little in common with one another.",
+      "body2": "In 2018 I founded Renace Fashion Studio. For years I worked with models, founders and professionals on how they looked, how they spoke and how they showed up. That's where I understood the thing that defines how I work now:",
+      "pull": "A brand can have flawless strategy and still fail, because the person representing it can't carry it.",
+      "close": "So I do both. I build the brand. And I develop the person behind it.",
+      "cta": "Read the full story"
+    },
+    "process": {
+      "eyebrow": "Process",
+      "headline": "A method, not a formula",
+      "subhead": "The order never changes. The content always does.",
+      "footnote": "Every project begins with a diagnostic conversation. I don't take work without one, because I wouldn't know what I was solving.",
+      "deliverableLabel": "What you get",
+      "steps": [
+        {
+          "title": "Listen",
+          "body": "We start with a long conversation. Not a form: an actual conversation where I understand the business, the moment, what's working, what's uncomfortable, and the thing you haven't been able to name for a while.",
+          "deliverable": "A diagnostic session and a written record of what I found."
+        },
+        {
+          "title": "Diagnose",
+          "body": "I review what exists — the brand, the competitors, the content, current perception, and the presence of whoever represents it. This is usually where the incoherences nobody wanted to look at directly come to the surface.",
+          "deliverable": "Brand and presence audit, with clear priorities."
+        },
+        {
+          "title": "Define",
+          "body": "The hard decisions get made. Positioning, territory, audience, tone, visual direction. Fewer options, more judgement.",
+          "deliverable": "Brand platform and creative direction."
+        },
+        {
+          "title": "Build",
+          "body": "Execution. Identity, content, campaigns, scripts, experiences, wardrobe, presence training — whatever the project needs, in the order that makes sense.",
+          "deliverable": "The deliverables agreed in scope."
+        },
+        {
+          "title": "Stay",
+          "body": "The brand meets the world, and that's where it gets interesting. We adjust, measure, correct. Nothing is born finished.",
+          "deliverable": "Support through the agreed period."
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "Selected work",
+      "headline": "The work, in detail",
+      "subhead": "Projects where the brand and the person were built at the same time.",
+      "placeholder": "Case studies are published with each client's permission. Some projects are covered by confidentiality and don't appear here. If you'd like to see work relevant to your sector, write to me and I'll share it privately.",
+      "cta": "Write to me"
+    },
+    "faq": {
+      "eyebrow": "Frequently asked",
+      "headline": "Before you write",
+      "items": [
+        {
+          "q": "Who do you work with?",
+          "a": "Companies that need brand clarity, founders who've become the face of their business, and professionals building a position of their own. I've worked in fashion, beauty, hospitality, nightlife and professional services. Sector matters less than moment: this works best when there's something real to put in order."
+        },
+        {
+          "q": "Do you only work with large brands?",
+          "a": "No. I work with projects that are just starting and with brands that have existed for years. What I do need is a willingness to make decisions. Projects that stall almost never stall over budget — they stall over indecision."
+        },
+        {
+          "q": "How long does a project take?",
+          "a": "A 1:1 consultation resolves in a single session. A branding project usually runs six to ten weeks. Personal brand and presence work is better in three-month cycles."
+        },
+        {
+          "q": "Do you work in person or remotely?",
+          "a": "Both. I work between New York and Colombia, and I run projects remotely without difficulty. For production, on-set direction and presence training, being in the room changes the result significantly."
+        },
+        {
+          "q": "What if I'm not sure what I need?",
+          "a": "That's the most common situation there is. That's what the diagnostic conversation is for — you leave it knowing what you need, whether or not you work with me."
+        }
+      ]
+    },
+    "closing": {
+      "statement": "Let's talk about what you're building.",
+      "body": "Tell me where you are. If I can help, I'll say so. If I can't, I'll say that too — and tell you who can.",
+      "cta": "Start a conversation",
+      "microcopy": "I take a limited number of projects each quarter."
+    }
+  },
+  "services": {
+    "sections": {
+      "overview": "Overview",
+      "whoItsFor": "Who it's for",
+      "capabilities": "What's included",
+      "process": "Process",
+      "faq": "Frequently asked"
+    },
+    "cta": {
+      "statement": "Not sure which one you need?",
+      "body": "That's normal. Write to me and we'll work it out in the first conversation.",
+      "button": "Start a conversation"
+    },
+    "areas": {
+      "creative-direction": {
+        "tagline": "Deciding who you are before deciding how you look.",
+        "overview": "Positioning, identity, brand architecture, creative direction, and everything that makes a brand recognisable without a signature.",
+        "who": [
+          "Brands being born, brands that grew without direction, and brands that no longer resemble what they claim to be.",
+          "New ventures, and existing brands that need an identity matching what they've already become.",
+          "Brands that need a campaign, a launch, a visual reset — or simply content that looks like what they charge for."
+        ]
+      },
+      "digital-marketing": {
+        "tagline": "Turning strategy into something people see, understand and remember.",
+        "overview": "Content with judgement, not content by volume. Deciding where to be, how often, and with what message, based on what the business actually needs this year.",
+        "who": [
+          "Businesses spending on marketing without clarity on what's working.",
+          "Brands and professionals whose profile doesn't match the quality of their work.",
+          "Teams and founders producing a great deal and connecting very little."
+        ]
+      },
+      "image-consulting": {
+        "tagline": "How you look, how you speak, how you appear, and what stays after you leave the room.",
+        "overviewHeadline": "This isn't about dressing better.",
+        "overviewSubhead": "It's about the impression you leave matching what you're actually capable of.",
+        "overview": "Most image consulting ends in the wardrobe. This one starts there. Because clothing is only the first layer. After it comes how you enter a room. How you stand when someone speaks to you. What you do with your hands in front of a camera. How you tell your story in thirty seconds without sounding like a résumé. All of that can be worked on. And all of it decides whether you're taken seriously.",
+        "who": [
+          "Founders who became the face of their business.",
+          "Professionals who need visibility to grow.",
+          "People about to appear in media, on stage or on camera.",
+          "Executives representing a company.",
+          "Talent and models building a career."
+        ]
+      }
+    },
+    "capabilities": {
+      "brand-strategy": {
+        "description": "Deciding who you are before deciding how you look.",
+        "supporting": "The work that comes before design and before content."
+      },
+      "branding": {
+        "description": "Turning strategy into something you can see.",
+        "supporting": "Identity isn't the logo."
+      },
+      "creative-direction": {
+        "description": "The judgement behind everything the brand shows.",
+        "supporting": "I direct the concept, the aesthetic and the execution of campaigns, shoots and film."
+      },
+      "content-strategy": {
+        "description": "Content that answers to an intention.",
+        "supporting": "From idea to script, from script to set, from set to publication."
+      },
+      "brand-experience": {
+        "description": "Making the brand something people move through.",
+        "supporting": "Launches, activations, events and spaces where a brand stops being an image and becomes an experience."
+      },
+      "campaign-direction": {
+        "description": "One idea, carried across every piece.",
+        "supporting": "I set the concept and the through-line, then direct how it plays out across channels, formats and moments."
+      },
+      "art-direction": {
+        "description": "How it looks, and why it looks that way.",
+        "supporting": "I set the visual language of a piece — reference, composition, styling, colour — and hold it from moodboard to final frame."
+      },
+      "marketing-strategy": {
+        "description": "A plan built around an objective, not around a trend.",
+        "supporting": "Deciding where to be, how often, and with what message, based on what the business actually needs this year."
+      },
+      "social-media-strategy": {
+        "description": "Social with editorial judgement, not a filled calendar.",
+        "supporting": "The point isn't to post more. It's that what you post builds something."
+      },
+      "website-strategy": {
+        "description": "Deciding what the site is for before deciding how it looks.",
+        "supporting": "Structure, message hierarchy and the path a visitor takes, defined so the site sells and doesn't only display."
+      },
+      "website-design-development": {
+        "description": "The site built the way it was planned.",
+        "supporting": "Design and build of the pages that carry the brand, from the visual system through to a working, responsive result."
+      },
+      "landing-pages": {
+        "description": "One page, one decision.",
+        "supporting": "A focused page built around a single action — a launch, a campaign, an offer — with nothing on it that doesn't serve that action."
+      },
+      "customer-journey-strategy": {
+        "description": "The path from stranger to client, mapped.",
+        "supporting": "Every stage a person moves through, and the message, channel and moment that carry them to the next one."
+      },
+      "analytics-performance-optimization": {
+        "description": "Reading what happened, then deciding what to change.",
+        "supporting": "The numbers that matter, reviewed on a set cadence and turned into decisions, not dashboards nobody opens."
+      },
+      "image-consulting": {
+        "description": "How you look, how you move, and what people remember.",
+        "supporting": "It's the complete body of work on the impression you leave."
+      },
+      "personal-branding": {
+        "description": "Building a position, not a nice profile.",
+        "supporting": "I work a personal brand the way a commercial brand is worked: with strategy, territory and aesthetic judgement."
+      },
+      "presence-communication": {
+        "description": "Learning how to show up.",
+        "supporting": "Presence isn't charisma. It's technique."
+      },
+      "executive-presence": {
+        "description": "How you hold a room you didn't organise.",
+        "supporting": "Bearing, tone and command for the meetings, stages and negotiations where the room is already watching."
+      },
+      "wardrobe-strategy": {
+        "description": "A wardrobe that works, not one that's full.",
+        "supporting": "We audit what you own, edit it down, and build a plan for what to wear by context — office, event, press, camera."
+      },
+      "personal-positioning": {
+        "description": "The place you occupy in people's minds.",
+        "supporting": "Deciding what you want to be known for, and to whom, before any content, any post, any appearance."
+      },
+      "visual-identity-for-professionals": {
+        "description": "A personal image system, not a one-off look.",
+        "supporting": "Colour, style, photography and the details that make you recognisable across every context you appear in."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "headline": "Write to me",
+    "subhead": "Tell me briefly what you need. I answer personally, within 48 hours.",
+    "sideCopy": "If you'd prefer, we can start with a short fifteen-minute call to see whether working together makes sense.",
+    "email": "hola@laurarenteria.com",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "location": "New York · Colombia",
+    "socialLabel": "Social",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "name@email.com",
+      "message": "Tell me more",
+      "messagePlaceholder": "What are you building, and where are you stuck?",
+      "submit": "Send message"
+    }
+  },
   "footer": {
+    "closingLine": "Your brand begins long before you speak.",
     "navigation": "Navigation",
     "contact": "Contact",
     "social": "Social",
     "legal": "Legal",
-    "rights": "All rights reserved",
-    "contactPending": "Contact details pending."
-  }
+    "rights": "All rights reserved"
+  },
+  "notFound": {
+    "title": "This page doesn't exist.",
+    "body": "The link may have changed. Let's go back to the beginning.",
+    "cta": "Back to home"
+  },
+  "error": {
+    "title": "Something broke on our side.",
+    "body": "We're on it. If it's urgent, write to",
+    "cta": "Try again"
+  },
+  "loading": "One moment…"
 }
