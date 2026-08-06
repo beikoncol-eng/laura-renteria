@@ -1,7 +1,12 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Text } from '@/components/typography';
-import { Reveal, EditorialImage, ImagePlaceholder } from '@/components/ui';
+import {
+  Reveal,
+  StaggerText,
+  EditorialImage,
+  ImagePlaceholder,
+} from '@/components/ui';
 import { buttonClassName } from '@/components/buttons';
 import { ROUTES, SERVICE_SLUGS, type ServiceSlug } from '@/lib/domain';
 import type { MediaAsset } from '@/lib/media';
@@ -27,13 +32,16 @@ export function ServiceHero({ slug, hero }: ServiceHeroProps) {
   return (
     <section className="relative w-full">
       <div className="grid min-h-[100dvh] grid-cols-1 md:grid-cols-2">
-        <div className="relative order-1 min-h-[58vh] md:order-2 md:min-h-[100dvh]">
+        <div className="group relative order-1 min-h-[58vh] overflow-hidden md:order-2 md:min-h-[100dvh]">
           {hero ? (
-            <EditorialImage
-              asset={hero}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
+            <Reveal variant="image" delay={0.5} className="h-full w-full">
+              <EditorialImage
+                asset={hero}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                position="50% 12%"
+                priority
+              />
+            </Reveal>
           ) : (
             <ImagePlaceholder ratio="fill" label="Service Portrait" />
           )}
@@ -46,11 +54,12 @@ export function ServiceHero({ slug, hero }: ServiceHeroProps) {
                 Consulting Area&nbsp;&nbsp;·&nbsp;&nbsp;{position}
               </p>
             </Reveal>
-            <Reveal delay={0.08}>
-              <Text as="h1" variant="display-l">
-                {humanizeSlug(slug)}
-              </Text>
-            </Reveal>
+            <StaggerText
+              as="h1"
+              text={humanizeSlug(slug)}
+              delay={0.08}
+              className="font-display tracking-display text-ink text-[3rem] leading-[1.08] md:text-[5rem]"
+            />
             <Reveal delay={0.16} className="mt-[var(--space-32)]">
               <Text variant="body" className="text-muted max-w-[46ch]">
                 {area.tagline}

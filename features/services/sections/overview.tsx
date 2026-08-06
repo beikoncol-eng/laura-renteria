@@ -64,12 +64,13 @@ export function ServiceOverview({ slug, support }: ServiceOverviewProps) {
           </div>
 
           <div className="md:col-span-5 md:col-start-8">
-            <Reveal>
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
+            <Reveal variant="image" delay={0.1}>
+              <div className="group relative aspect-[4/5] w-full overflow-hidden">
                 {support ? (
                   <EditorialImage
                     asset={support}
                     sizes="(max-width: 768px) 100vw, 42vw"
+                    position="50% 20%"
                   />
                 ) : (
                   <ImagePlaceholder ratio="4/5" label="Supporting Image" />

@@ -8,7 +8,6 @@ import {
   SplitText,
   EditorialImage,
   ParallaxImage,
-  ImagePlaceholder,
 } from '@/components/ui';
 import { Process, ClosingCta } from '@/features/home/sections';
 import {
@@ -270,11 +269,17 @@ function SelectedWork() {
           </div>
         </Grid>
 
-        <Reveal className="mt-[var(--space-96)]">
-          <div className="grid grid-cols-2 gap-[var(--space-24)] md:grid-cols-4">
-            {[0, 1, 2, 3].map((i) => (
-              <ImagePlaceholder key={i} ratio="16/9" label="Client" />
-            ))}
+        <Reveal
+          variant="image"
+          className="mt-[var(--space-64)] md:mt-[var(--space-80)]"
+        >
+          <div className="group relative aspect-[16/10] w-full overflow-hidden md:aspect-[21/9]">
+            <EditorialImage
+              asset={MEDIA.editorialBreak}
+              sizes="100vw"
+              position="50% 38%"
+              zoom={false}
+            />
           </div>
         </Reveal>
       </Container>
