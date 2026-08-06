@@ -24,6 +24,10 @@ export interface BuildMetadataArgs {
   path?: string;
   title?: string;
   description?: string;
+  /** Optional OG/Twitter title, if it should differ from the page title. */
+  ogTitle?: string;
+  /** Optional OG/Twitter description, if it should differ from the meta one. */
+  ogDescription?: string;
   /** Absolute or root-relative OG/Twitter image. */
   image?: string;
 }
@@ -33,6 +37,8 @@ export function buildMetadata({
   path = '',
   title,
   description,
+  ogTitle,
+  ogDescription,
   image,
 }: BuildMetadataArgs): Metadata {
   const cleanPath = path === '/' ? '' : path;
@@ -46,7 +52,16 @@ export function buildMetadata({
 
   // Default every page to the brand OG card (resolved to absolute via
   // metadataBase) so shared links always present a polished visual identity.
-  const images = [image ?? SEO_DEFAULTS.defaultOgImage];
+  // Explicit 1200×630 dimensions let platforms render the card without a fetch.
+  const ogImage = {
+    url: image ?? SEO_DEFAULTS.defaultOgImage,
+    width: SEO_DEFAULTS.ogImageWidth,
+    height: SEO_DEFAULTS.ogImageHeight,
+    alt: ogTitle ?? title ?? SITE.name,
+  };
+
+  const socialTitle = ogTitle ?? title;
+  const socialDescription = ogDescription ?? description;
 
   return {
     ...(title ? { title } : {}),
@@ -57,15 +72,15 @@ export function buildMetadata({
       siteName: SITE.name,
       locale: OG_LOCALE[locale],
       url: canonical,
-      ...(title ? { title } : {}),
-      ...(description ? { description } : {}),
-      ...(images ? { images } : {}),
+      ...(socialTitle ? { title: socialTitle } : {}),
+      ...(socialDescription ? { description: socialDescription } : {}),
+      images: [ogImage],
     },
     twitter: {
       card: SEO_DEFAULTS.twitterCard,
-      ...(title ? { title } : {}),
-      ...(description ? { description } : {}),
-      ...(images ? { images } : {}),
+      ...(socialTitle ? { title: socialTitle } : {}),
+      ...(socialDescription ? { description: socialDescription } : {}),
+      images: [ogImage.url],
     },
   };
 }

@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing, isValidLocale } from '@/i18n/routing';
-import { isServiceSlug, servicePath, type ServiceSlug } from '@/lib/domain';
+import {
+  isServiceSlug,
+  servicePath,
+  SITE,
+  type ServiceSlug,
+} from '@/lib/domain';
 import { buildMetadata } from '@/lib/seo';
-import { PageWrapper } from '@/components/layout';
+import { humanizeSlug } from '@/lib/utils';
+import { PageWrapper, JsonLd } from '@/components/layout';
 import { ServicePage } from '@/features/services';
 
 /**
@@ -32,7 +38,17 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!isValidLocale(locale) || !isServiceSlug(slug)) return {};
-  return buildMetadata({ locale, path: servicePath(slug) });
+  const tAreas = await getTranslations({
+    locale,
+    namespace: 'services.areas',
+  });
+  const area = tAreas.raw(slug) as { tagline: string };
+  return buildMetadata({
+    locale,
+    path: servicePath(slug),
+    title: humanizeSlug(slug),
+    description: area.tagline,
+  });
 }
 
 export default async function ServiceAreaPage({
@@ -47,8 +63,35 @@ export default async function ServiceAreaPage({
     notFound();
   }
 
+  const tNav = await getTranslations({ locale, namespace: 'nav' });
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: tNav('home'),
+        item: `${SITE.url}/${locale}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: tNav('services'),
+        item: `${SITE.url}/${locale}/services`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: humanizeSlug(slug),
+        item: `${SITE.url}/${locale}${servicePath(slug)}`,
+      },
+    ],
+  };
+
   return (
     <PageWrapper transparentHeader heroText="ink">
+      <JsonLd data={breadcrumb} />
       <ServicePage slug={slug} />
     </PageWrapper>
   );

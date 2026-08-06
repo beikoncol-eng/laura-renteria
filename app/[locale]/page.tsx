@@ -25,6 +25,7 @@ export async function generateMetadata({
     path: '/',
     title: t('title'),
     description: t('description'),
+    ogDescription: t('ogDescription'),
   });
 
   // Home title is complete on its own — bypass the layout's "%s — …" template

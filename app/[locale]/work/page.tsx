@@ -23,12 +23,17 @@ export async function generateMetadata({
   const resolved = isValidLocale(locale) ? locale : routing.defaultLocale;
   const t = await getTranslations({ locale: resolved, namespace: 'seo.work' });
 
-  return buildMetadata({
-    locale: resolved,
-    path: ROUTES.work,
-    title: t('title'),
-    description: t('description'),
-  });
+  return {
+    ...buildMetadata({
+      locale: resolved,
+      path: ROUTES.work,
+      title: t('title'),
+      description: t('description'),
+    }),
+    // Unpublished (hidden from nav + sitemap) — keep it out of the index until
+    // its content is ready, even if the URL is reached directly.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function Work({

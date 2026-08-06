@@ -27,8 +27,9 @@
   },
   "seo": {
     "home": {
-      "title": "Laura Rentería — Brand Strategy, Creative Direction & Image Consulting",
-      "description": "Consultant in branding, creative direction and personal brand. I build brands and the people who represent them. New York · Colombia."
+      "title": "Laura Rentería | Brand Strategy & Creative Direction",
+      "description": "Brand strategist, creative director and image consultant helping companies, founders and professionals build brands that are remembered.",
+      "ogDescription": "Helping brands, founders and professionals build a presence that is remembered."
     },
     "about": {
       "title": "About",

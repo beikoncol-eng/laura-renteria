@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing, isValidLocale } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
-import { SITE } from '@/lib/domain';
+import { SITE, SEO_KEYWORDS } from '@/lib/domain';
 import { buildMetadata } from '@/lib/seo';
 import { SiteJsonLd } from '@/components/layout';
 import '@/styles/globals.css';
@@ -34,6 +34,12 @@ export async function generateMetadata({
       default: SITE.name,
       template: `%s — ${SITE.name}`,
     },
+    applicationName: SITE.name,
+    authors: [{ name: SITE.name, url: SITE.url }],
+    creator: SITE.name,
+    publisher: SITE.name,
+    keywords: [...SEO_KEYWORDS],
+    formatDetection: { email: false, address: false, telephone: false },
     // Root-level localized alternates (canonical + hreflang). Pages extend
     // this via their own generateMetadata with page-specific title/description.
     ...buildMetadata({ locale: resolved }),

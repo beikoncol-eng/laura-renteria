@@ -26,12 +26,17 @@ export async function generateMetadata({
     namespace: 'seo.portfolio',
   });
 
-  return buildMetadata({
-    locale: resolved,
-    path: ROUTES.portfolio,
-    title: t('title'),
-    description: t('description'),
-  });
+  return {
+    ...buildMetadata({
+      locale: resolved,
+      path: ROUTES.portfolio,
+      title: t('title'),
+      description: t('description'),
+    }),
+    // Unpublished (hidden from nav + sitemap) — keep it out of the index until
+    // its content is ready, even if the URL is reached directly.
+    robots: { index: false, follow: true },
+  };
 }
 
 export default async function Portfolio({
