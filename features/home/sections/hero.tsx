@@ -57,16 +57,18 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Portrait */}
+        {/* Portrait — reveals independently of the type, with its own mask. */}
         <div className="group relative order-1 min-h-[68vh] overflow-hidden md:order-2 md:col-span-6 md:min-h-[100dvh]">
-          <ParallaxImage className="h-full w-full">
-            <EditorialImage
-              asset={MEDIA.heroPortrait}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              position="50% 10%"
-              priority
-            />
-          </ParallaxImage>
+          <Reveal variant="image" delay={0.15} className="h-full w-full">
+            <ParallaxImage className="h-full w-full">
+              <EditorialImage
+                asset={MEDIA.heroPortrait}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                position="50% 10%"
+                priority
+              />
+            </ParallaxImage>
+          </Reveal>
         </div>
       </div>
     </section>

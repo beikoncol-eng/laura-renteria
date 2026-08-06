@@ -20,14 +20,14 @@ export function SiteFooter() {
   return (
     <footer
       aria-label={tA11y('footerNavigation')}
-      className="border-line border-t pt-[var(--space-120)] pb-[var(--space-96)] md:pt-[var(--space-240)] md:pb-[var(--space-160)]"
+      className="border-line border-t pt-[var(--space-96)] pb-[var(--space-64)] md:pt-[var(--space-160)] md:pb-[var(--space-96)]"
     >
       <Container>
-        <p className="font-display tracking-display text-ink mb-[var(--space-160)] max-w-[20ch] text-[clamp(2rem,4vw,3.25rem)] leading-[1.1] text-balance">
+        <p className="font-display tracking-display text-ink mb-[var(--space-120)] max-w-[20ch] text-[clamp(2rem,4vw,3.25rem)] leading-[1.1] text-balance">
           {tFooter('closingLine')}
         </p>
 
-        <Grid cols={1} md={4} gap={80}>
+        <Grid cols={1} md={4} gap={96}>
           {/* Navigation */}
           <Stack gap={24} as="nav" aria-label={tA11y('footerNavigation')}>
             <Label as="h2">{tFooter('navigation')}</Label>

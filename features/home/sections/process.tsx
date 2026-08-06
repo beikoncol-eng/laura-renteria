@@ -70,15 +70,19 @@ export function Process() {
                 key={step.title}
                 className="border-line border-t py-[var(--space-40)] first:pt-0 last:pb-0"
               >
-                <Reveal>
-                  <Grid md={12} gap={24} className="items-baseline">
-                    <span className="font-display text-muted text-[2.5rem] leading-none md:col-span-2 md:text-[3rem]">
+                <Grid md={12} gap={24} className="items-baseline">
+                  <Reveal className="md:col-span-2">
+                    <span className="font-display text-muted text-[2.5rem] leading-none md:text-[3rem]">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <div className="md:col-span-10">
+                  </Reveal>
+                  <div className="md:col-span-10">
+                    <Reveal delay={0.08}>
                       <h3 className="font-display tracking-display text-ink text-[1.5rem] md:text-[1.75rem]">
                         {step.title}
                       </h3>
+                    </Reveal>
+                    <Reveal delay={0.16}>
                       <p className="font-body text-muted mt-[var(--space-16)] max-w-[52ch] leading-[1.7]">
                         {step.body}
                       </p>
@@ -88,9 +92,9 @@ export function Process() {
                           {step.deliverable}
                         </span>
                       </p>
-                    </div>
-                  </Grid>
-                </Reveal>
+                    </Reveal>
+                  </div>
+                </Grid>
               </li>
             ))}
           </ol>

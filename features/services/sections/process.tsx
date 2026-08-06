@@ -72,9 +72,13 @@ export function ServiceProcess({ craft }: ServiceProcessProps) {
                   <span className="font-display text-muted block text-[2rem] leading-none md:text-[2.5rem]">
                     {String(index + 1).padStart(2, '0')}
                   </span>
+                </Reveal>
+                <Reveal delay={0.08}>
                   <h3 className="font-display tracking-display text-ink mt-[var(--space-16)] text-[1.5rem] md:text-[1.75rem]">
                     {step.title}
                   </h3>
+                </Reveal>
+                <Reveal delay={0.16}>
                   <p className="font-body text-muted mt-[var(--space-16)] max-w-[52ch] leading-[1.7]">
                     {step.body}
                   </p>

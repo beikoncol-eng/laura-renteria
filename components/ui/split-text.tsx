@@ -66,9 +66,17 @@ export function SplitText({
             className="block overflow-hidden [padding-bottom:0.08em]"
           >
             <motion.span
-              className="inline-block will-change-transform"
-              initial={reduce ? { opacity: 0 } : { opacity: 0, y: '100%' }}
-              whileInView={reduce ? { opacity: 1 } : { opacity: 1, y: '0%' }}
+              className="inline-block will-change-[transform,filter]"
+              initial={
+                reduce
+                  ? { opacity: 0 }
+                  : { opacity: 0, y: '100%', filter: 'blur(8px)' }
+              }
+              whileInView={
+                reduce
+                  ? { opacity: 1 }
+                  : { opacity: 1, y: '0%', filter: 'blur(0px)' }
+              }
               viewport={VIEWPORT_ONCE}
               transition={{
                 duration: DURATION.slow,

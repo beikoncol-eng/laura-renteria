@@ -6,13 +6,14 @@ import { CONTACT } from '@/lib/domain';
 import { EASE, DURATION } from '@/lib/motion';
 
 /**
- * WhatsAppButton — a small, premium floating action fixed in the upper-right,
- * below the header so it never collides with the nav. `wa.me` opens the app on
- * mobile and WhatsApp Web on desktop. Entrance is a quiet fade + settle; hover
- * is a soft lift, never a bounce or pulse.
+ * WhatsAppButton — a small, premium floating action fixed in the bottom-right
+ * corner (20px mobile · 28px tablet · 32px desktop). `wa.me` opens the app on
+ * mobile and WhatsApp Web on desktop. Entrance is a quiet fade + a .9 → 1
+ * settle, once; hover is a soft lift, never a bounce or pulse.
  *
- * It sits below the header (z-40) and the full-screen mobile menu (z-90), so
- * whenever another floating surface appears it is covered automatically.
+ * It sits above page content (z-40) but below the full-screen mobile menu
+ * (z-90), so whenever another floating surface appears it is covered
+ * automatically. It never touches the header.
  */
 export function WhatsAppButton() {
   const t = useTranslations('a11y');
@@ -25,8 +26,8 @@ export function WhatsAppButton() {
       rel="noopener noreferrer"
       aria-label={t('whatsapp')}
       title={t('whatsapp')}
-      initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.85, y: -6 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
+      initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: reduce ? 0 : DURATION.slow,
         ease: EASE.luxe,
@@ -34,7 +35,7 @@ export function WhatsAppButton() {
       }}
       whileHover={reduce ? undefined : { y: -2, scale: 1.04 }}
       whileTap={reduce ? undefined : { scale: 0.97 }}
-      className="group text-paper bg-ink fixed top-[calc(var(--header-h-mobile)+var(--space-16))] right-[var(--space-16)] z-40 inline-flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-black/10 transition-[opacity,box-shadow] duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] hover:opacity-95 hover:shadow-[0_8px_24px_-8px_rgba(0,0,0,0.35)] md:top-[calc(var(--header-h-desktop)+var(--space-24))] md:right-[var(--space-32)] md:h-14 md:w-14"
+      className="group text-paper bg-ink fixed right-5 bottom-5 z-40 inline-flex h-12 w-12 items-center justify-center rounded-full ring-1 ring-black/10 transition-[opacity,box-shadow] duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] hover:opacity-95 hover:shadow-[0_8px_24px_-8px_rgba(0,0,0,0.35)] md:right-7 md:bottom-7 md:h-14 md:w-14 lg:right-8 lg:bottom-8"
     >
       <svg
         viewBox="0 0 24 24"
