@@ -2,17 +2,17 @@ import { useTranslations } from 'next-intl';
 import { Section, Container, Grid } from '@/components/layout';
 import { Text } from '@/components/typography';
 import { Reveal } from '@/components/ui';
-import { Input, Textarea } from '@/components/forms';
-import { Button } from '@/components/buttons';
+import { ContactForm } from '@/components/forms';
 import { SocialLinks } from '@/components/footer';
+import { CONTACT } from '@/lib/domain';
 
 /**
- * 9. Contact — elegant and minimal. Form left, details right, with generous
- * spacing throughout. Submission (Resend) is a later phase; the button is inert.
+ * 9. Contact — elegant and minimal. Shared ContactForm left, real contact
+ * details right, with generous spacing throughout. The form composes a
+ * pre-filled email (mailto) until a transactional backend is wired.
  */
 export function Contact() {
   const t = useTranslations('contact');
-  const tForm = useTranslations('contact.form');
 
   return (
     <Section>
@@ -30,34 +30,8 @@ export function Contact() {
               >
                 {t('headline')}
               </Text>
-
-              <form className="flex flex-col gap-[var(--space-40)]" noValidate>
-                <div className="grid gap-[var(--space-40)] md:grid-cols-2">
-                  <Input
-                    label={tForm('name')}
-                    name="name"
-                    autoComplete="name"
-                    placeholder={tForm('namePlaceholder')}
-                  />
-                  <Input
-                    label={tForm('email')}
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder={tForm('emailPlaceholder')}
-                  />
-                </div>
-                <Textarea
-                  label={tForm('message')}
-                  name="message"
-                  placeholder={tForm('messagePlaceholder')}
-                />
-                <div className="pt-[var(--space-16)]">
-                  {/* Inert placeholder — submission (Resend) wired in a later phase. */}
-                  <Button type="button">{tForm('submit')}</Button>
-                </div>
-              </form>
             </Reveal>
+            <ContactForm variant="box" />
           </div>
 
           <div className="md:col-span-4 md:col-start-9">
@@ -72,10 +46,23 @@ export function Contact() {
                       {t('emailLabel')}
                     </Text>
                     <a
-                      href={`mailto:${t('email')}`}
+                      href={`mailto:${CONTACT.email}`}
                       className="link-underline font-display tracking-display text-ink w-fit text-[1.25rem]"
                     >
-                      {t('email')}
+                      {CONTACT.email}
+                    </a>
+                  </div>
+                  <div className="flex flex-col gap-[var(--space-8)]">
+                    <Text variant="label" as="p">
+                      {t('phoneLabel')}
+                    </Text>
+                    <a
+                      href={CONTACT.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline font-body text-ink w-fit"
+                    >
+                      {CONTACT.phoneDisplay}
                     </a>
                   </div>
                   <div className="flex flex-col gap-[var(--space-8)]">

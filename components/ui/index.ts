@@ -3,6 +3,7 @@ export { EditorialImage, type EditorialImageProps } from './editorial-image';
 export { ParallaxImage, type ParallaxImageProps } from './parallax-image';
 export { Parallax, type ParallaxProps } from './parallax';
 export { Sticky, type StickyProps } from './sticky';
+export { WhatsAppButton } from './whatsapp-button';
 export { Magnetic, type MagneticProps } from './magnetic';
 export {
   Ph,

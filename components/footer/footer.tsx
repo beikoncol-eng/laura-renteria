@@ -3,7 +3,7 @@ import { Container, Grid, Stack } from '@/components/layout';
 import { Label, Caption } from '@/components/typography';
 import { NavLink } from '@/components/navigation';
 import { SocialLinks } from './social-links';
-import { FOOTER_NAV, SITE } from '@/lib/domain';
+import { FOOTER_NAV, SITE, CONTACT } from '@/lib/domain';
 
 /**
  * SiteFooter — editorial, minimal, a quiet ending (Layout doc). Opens with the
@@ -50,10 +50,18 @@ export function SiteFooter() {
             <Label as="h2">{tFooter('contact')}</Label>
             <Stack gap={8}>
               <a
-                href={`mailto:${tContact('email')}`}
+                href={`mailto:${CONTACT.email}`}
                 className="link-underline font-body text-ink w-fit text-[0.9375rem]"
               >
-                {tContact('email')}
+                {CONTACT.email}
+              </a>
+              <a
+                href={CONTACT.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline font-body text-ink w-fit text-[0.9375rem]"
+              >
+                {CONTACT.phoneDisplay}
               </a>
               <Caption>{tContact('location')}</Caption>
             </Stack>

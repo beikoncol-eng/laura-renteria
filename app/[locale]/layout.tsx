@@ -6,6 +6,7 @@ import { routing, isValidLocale } from '@/i18n/routing';
 import { fontVariables } from '@/lib/fonts';
 import { SITE } from '@/lib/domain';
 import { buildMetadata } from '@/lib/seo';
+import { SiteJsonLd } from '@/components/layout';
 import '@/styles/globals.css';
 
 /**
@@ -58,6 +59,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={fontVariables}>
       <body>
+        <SiteJsonLd locale={locale} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

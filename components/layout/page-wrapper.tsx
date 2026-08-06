@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { SiteFooter } from '@/components/footer';
+import { WhatsAppButton } from '@/components/ui';
 import { SkipToContent } from './skip-to-content';
 import { SiteHeader } from './header';
 import { Main } from './main';
@@ -31,6 +32,7 @@ export function PageWrapper({
     <>
       <SkipToContent />
       <SiteHeader transparent={transparentHeader} heroText={heroText} />
+      <WhatsAppButton />
       <Main
         className={cn(
           !transparentHeader &&

@@ -1,19 +1,27 @@
 /**
- * Contact information — SHAPE ONLY.
+ * Contact information — the real, canonical contact facts (non-localized).
  *
- * Values are real contact data owned by the CMS (global settings). They are
- * intentionally `null` here (pending), never invented. Consumers should treat
- * null as "not yet available" and render a structural placeholder.
+ * These are the single source of truth for every contact touchpoint: the
+ * contact section and page, the footer, social links, structured data and the
+ * floating WhatsApp button. Localized labels (and the human location string)
+ * live in messages; the values here are language-neutral.
  */
 export interface ContactInfo {
-  email: string | null;
-  phone: string | null;
-  /** Human-readable location, e.g. a city pairing. */
-  location: string | null;
+  email: string;
+  /** Display form, e.g. "+1 646 247 7994". */
+  phoneDisplay: string;
+  /** E.164 form for tel: links. */
+  phoneE164: string;
+  /** wa.me deep link — opens the app on mobile, WhatsApp Web on desktop. */
+  whatsappUrl: string;
+  /** Public Instagram profile. */
+  instagramUrl: string;
 }
 
 export const CONTACT: ContactInfo = {
-  email: null,
-  phone: null,
-  location: null,
+  email: 'Laurareac96@gmail.com',
+  phoneDisplay: '+1 646 247 7994',
+  phoneE164: '+16462477994',
+  whatsappUrl: 'https://wa.me/16462477994',
+  instagramUrl: 'https://www.instagram.com/laurarenteria96/?hl=es-la',
 };

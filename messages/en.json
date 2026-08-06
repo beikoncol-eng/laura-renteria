@@ -6,7 +6,8 @@
     "socialNavigation": "Social media",
     "homeLink": "Laura Rentería — Home",
     "openMenu": "Menu",
-    "closeMenu": "Close"
+    "closeMenu": "Close",
+    "whatsapp": "Chat on WhatsApp"
   },
   "nav": {
     "home": "Home",
@@ -309,8 +310,9 @@
     "headline": "Write to me",
     "subhead": "Tell me briefly what you need.",
     "sideCopy": "If you'd prefer, we can start with a short fifteen-minute call to see whether working together makes sense.",
-    "email": "hola@laurarenteria.com",
+    "email": "Laurareac96@gmail.com",
     "emailLabel": "Email",
+    "phoneLabel": "Phone · WhatsApp",
     "locationLabel": "Location",
     "location": "New York · Colombia",
     "socialLabel": "Social",
@@ -321,7 +323,8 @@
       "emailPlaceholder": "name@email.com",
       "message": "Tell me more",
       "messagePlaceholder": "What are you building, and where are you stuck?",
-      "submit": "Send message"
+      "submit": "Send message",
+      "sent": "Opening your email app…"
     }
   },
   "footer": {

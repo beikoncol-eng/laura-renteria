@@ -2,20 +2,18 @@ import { useTranslations } from 'next-intl';
 import { Section, Container, Grid } from '@/components/layout';
 import { Text } from '@/components/typography';
 import { Reveal, StaggerText } from '@/components/ui';
-import { Input, Textarea } from '@/components/forms';
-import { Button } from '@/components/buttons';
+import { ContactForm } from '@/components/forms';
 import { SocialLinks } from '@/components/footer';
+import { CONTACT } from '@/lib/domain';
 
 /**
  * Contact page — the dedicated version of the home contact section, given room
- * to breathe. A word-set headline, an improved form with premium underline
- * fields that reveal one after another, and a stronger right column where the
- * email is the loudest element. Submission (Resend) is a later phase; the button
- * is intentionally inert. Approved copy throughout.
+ * to breathe. A word-set headline, the shared ContactForm with premium
+ * underline fields, and a stronger right column where the email is the loudest
+ * element. The form composes a pre-filled email until a backend is wired.
  */
 export function ContactPage() {
   const t = useTranslations('contact');
-  const tForm = useTranslations('contact.form');
 
   return (
     <Section className="pt-[calc(var(--header-h-desktop)+var(--space-64))]">
@@ -37,44 +35,7 @@ export function ContactPage() {
         <Grid md={12} gap={96} className="items-start">
           {/* Form */}
           <div className="md:col-span-7">
-            <form className="flex flex-col gap-[var(--space-48)]" noValidate>
-              <div className="grid gap-[var(--space-48)] md:grid-cols-2">
-                <Reveal>
-                  <Input
-                    variant="underline"
-                    label={tForm('name')}
-                    name="name"
-                    autoComplete="name"
-                    placeholder={tForm('namePlaceholder')}
-                    wrapperClassName="w-full"
-                  />
-                </Reveal>
-                <Reveal delay={0.08}>
-                  <Input
-                    variant="underline"
-                    label={tForm('email')}
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder={tForm('emailPlaceholder')}
-                    wrapperClassName="w-full"
-                  />
-                </Reveal>
-              </div>
-              <Reveal delay={0.16}>
-                <Textarea
-                  variant="underline"
-                  label={tForm('message')}
-                  name="message"
-                  placeholder={tForm('messagePlaceholder')}
-                  wrapperClassName="w-full"
-                />
-              </Reveal>
-              <Reveal delay={0.24} className="pt-[var(--space-16)]">
-                {/* Inert placeholder — submission (Resend) wired in a later phase. */}
-                <Button type="button">{tForm('submit')}</Button>
-              </Reveal>
-            </form>
+            <ContactForm variant="underline" />
           </div>
 
           {/* Details */}
@@ -90,10 +51,23 @@ export function ContactPage() {
                       {t('emailLabel')}
                     </Text>
                     <a
-                      href={`mailto:${t('email')}`}
-                      className="link-underline font-display tracking-display text-ink w-fit text-[clamp(1.5rem,2.6vw,2.25rem)] leading-tight"
+                      href={`mailto:${CONTACT.email}`}
+                      className="link-underline font-display tracking-display text-ink w-fit text-[clamp(1.5rem,2.6vw,2.25rem)] leading-tight break-words"
                     >
-                      {t('email')}
+                      {CONTACT.email}
+                    </a>
+                  </div>
+                  <div className="flex flex-col gap-[var(--space-8)]">
+                    <Text variant="label" as="p">
+                      {t('phoneLabel')}
+                    </Text>
+                    <a
+                      href={CONTACT.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline font-body text-ink w-fit text-[1.125rem]"
+                    >
+                      {CONTACT.phoneDisplay}
                     </a>
                   </div>
                   <div className="flex flex-col gap-[var(--space-8)]">

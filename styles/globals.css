@@ -50,6 +50,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Safety net against accidental horizontal scroll from oversized editorial
+   type or offset compositions. `clip` (not `hidden`) does not create a scroll
+   container, so it never breaks `position: sticky`. */
+body {
+  overflow-x: clip;
+}
+
 img,
 picture,
 video,

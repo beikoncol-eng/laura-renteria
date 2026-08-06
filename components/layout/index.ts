@@ -31,3 +31,4 @@ export {
   type TransitionWrapperProps,
 } from './transition-wrapper';
 export { JsonLd, type JsonLdProps } from './json-ld';
+export { SiteJsonLd } from './site-json-ld';

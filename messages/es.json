@@ -6,7 +6,8 @@
     "socialNavigation": "Redes sociales",
     "homeLink": "Laura Rentería — Inicio",
     "openMenu": "Menú",
-    "closeMenu": "Cerrar"
+    "closeMenu": "Cerrar",
+    "whatsapp": "Escríbeme por WhatsApp"
   },
   "nav": {
     "home": "Inicio",
@@ -309,8 +310,9 @@
     "headline": "Escríbeme",
     "subhead": "Cuéntame brevemente qué necesitas.",
     "sideCopy": "Si prefieres, podemos empezar por una llamada corta de quince minutos para ver si tiene sentido trabajar juntas.",
-    "email": "hola@laurarenteria.com",
+    "email": "Laurareac96@gmail.com",
     "emailLabel": "Correo",
+    "phoneLabel": "Teléfono · WhatsApp",
     "locationLabel": "Ubicación",
     "location": "Nueva York · Colombia",
     "socialLabel": "Redes",
@@ -321,7 +323,8 @@
       "emailPlaceholder": "nombre@correo.com",
       "message": "Cuéntame más",
       "messagePlaceholder": "¿Qué estás construyendo y qué te tiene atascada?",
-      "submit": "Enviar mensaje"
+      "submit": "Enviar mensaje",
+      "sent": "Abriendo tu correo…"
     }
   },
   "footer": {
