@@ -3,11 +3,12 @@
 import type { ReactNode } from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { EASE, DURATION, VIEWPORT_ONCE } from '@/lib/motion';
+import { EASE, DURATION, RISE, VIEWPORT_ONCE } from '@/lib/motion';
 
 /**
  * Reveal — the shared scroll-entry motion. Two registers:
- *  - text (default): fade + a ~20px upward move.
+ *  - text (default): fade + a clearly-readable upward rise (~34px), optionally
+ *    with a brief defocus. The travel is deliberately visible, never a flicker.
  *  - image (`variant="image"`): an editorial MASK wipe (clip-path reveals top →
  *    bottom) with a slow settle from a slight over-scale. Reads as film, not fade.
  *
@@ -31,7 +32,7 @@ export function Reveal({
   className,
   variant = 'text',
   delay = 0,
-  y = 20,
+  y = RISE,
   blur = false,
 }: RevealProps) {
   const reduce = useReducedMotion();
@@ -41,7 +42,7 @@ export function Reveal({
     ? { hidden: { opacity: 0 }, shown: { opacity: 1 } }
     : isImage
       ? {
-          hidden: { clipPath: 'inset(0% 0% 100% 0%)', scale: 1.06 },
+          hidden: { clipPath: 'inset(0% 0% 100% 0%)', scale: 1.05 },
           shown: { clipPath: 'inset(0% 0% 0% 0%)', scale: 1 },
         }
       : {

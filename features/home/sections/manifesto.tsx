@@ -17,7 +17,10 @@ export function Manifesto() {
   ];
 
   return (
-    <Section className="overflow-hidden">
+    <Section
+      spacing="flush"
+      className="overflow-hidden pt-[var(--section-y-mobile)] pb-[var(--space-40)] md:pt-[var(--section-y-desktop)] md:pb-[var(--space-64)]"
+    >
       <Container>
         <div className="max-w-[62rem]">
           {lines.map((line, index) => (

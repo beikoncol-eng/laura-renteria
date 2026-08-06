@@ -23,10 +23,13 @@ export const EASE = {
 /** Durations in seconds, from quick state changes to cinematic image reveals. */
 export const DURATION = {
   fast: 0.32,
-  base: 0.6,
-  slow: 0.9,
+  base: 0.75,
+  slow: 0.95,
   image: 1.1,
 } as const;
+
+/** Default entry travel (px) — large enough to read as motion, not a flicker. */
+export const RISE = 34;
 
 /** Per-unit stagger steps (seconds) — the cadence of cinematic reveals. */
 export const STAGGER = {

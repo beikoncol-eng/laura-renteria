@@ -16,7 +16,7 @@ export type ButtonSize = 'md' | 'sm';
 
 const base =
   'inline-flex items-center justify-center font-body text-[1rem] font-medium ' +
-  'transition-[opacity,transform] duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] ' +
+  'transition-[opacity,transform,box-shadow] duration-[var(--dur-base)] ease-[cubic-bezier(0.16,1,0.3,1)] ' +
   'disabled:pointer-events-none disabled:opacity-40';
 
 const sizeClass: Record<ButtonSize, string> = {
@@ -26,9 +26,9 @@ const sizeClass: Record<ButtonSize, string> = {
 
 const variantClass: Record<ButtonVariant, string> = {
   primary:
-    'rounded-[2px] bg-ink text-paper hover:opacity-90 hover:-translate-y-px',
+    'rounded-[2px] bg-ink text-paper hover:opacity-95 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_-12px_rgba(20,20,20,0.45)]',
   secondary:
-    'rounded-[2px] border border-ink/25 bg-transparent text-ink hover:opacity-70 hover:-translate-y-px',
+    'rounded-[2px] border border-ink/25 bg-transparent text-ink hover:-translate-y-0.5 hover:border-ink/50 hover:shadow-[0_10px_28px_-14px_rgba(20,20,20,0.3)]',
   text: 'link-underline px-0 text-ink hover:opacity-100',
 };
 

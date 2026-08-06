@@ -31,12 +31,12 @@ export function Hero() {
               text={t('headline')}
               className="font-display tracking-display text-ink text-[clamp(2.75rem,5vw,5rem)] leading-[1.04]"
             />
-            <Reveal blur delay={0.35} className="mt-[var(--space-64)]">
+            <Reveal blur delay={0.3} className="mt-[var(--space-48)]">
               <p className="font-body text-muted max-w-[42ch] text-[1.0625rem] leading-[1.65] md:text-[1.1875rem]">
                 {t('subhead')}
               </p>
             </Reveal>
-            <Reveal delay={0.5} className="mt-[var(--space-80)]">
+            <Reveal delay={0.55} className="mt-[var(--space-64)]">
               <div className="flex flex-wrap items-center gap-[var(--space-48)]">
                 <Magnetic className="inline-block">
                   <Link
@@ -59,7 +59,7 @@ export function Hero() {
 
         {/* Portrait — reveals independently of the type, with its own mask. */}
         <div className="group relative order-1 min-h-[68vh] overflow-hidden md:order-2 md:col-span-6 md:min-h-[100dvh]">
-          <Reveal variant="image" delay={0.15} className="h-full w-full">
+          <Reveal variant="image" delay={0.65} className="h-full w-full">
             <ParallaxImage className="h-full w-full">
               <EditorialImage
                 asset={MEDIA.heroPortrait}
