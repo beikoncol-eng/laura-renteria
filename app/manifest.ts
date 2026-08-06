@@ -3,8 +3,8 @@ import { SITE } from '@/lib/domain';
 
 /**
  * Web app manifest (served at /manifest.webmanifest, auto-linked by Next).
- * Icons resolve from the LR monogram in app/icon.svg (scalable) and
- * app/apple-icon.png. Colors use the warm-white brand background.
+ * Icons are the LR monogram raster set in /public plus the scalable SVG.
+ * Colors use the warm-white brand background.
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -18,8 +18,25 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#faf9f6',
     background_color: '#faf9f6',
     icons: [
-      { src: '/icon.svg', type: 'image/svg+xml', sizes: 'any', purpose: 'any' },
-      { src: '/apple-icon.png', type: 'image/png', sizes: '180x180' },
+      {
+        src: '/android-chrome-192x192.png',
+        type: 'image/png',
+        sizes: '192x192',
+        purpose: 'any',
+      },
+      {
+        src: '/android-chrome-512x512.png',
+        type: 'image/png',
+        sizes: '512x512',
+        purpose: 'any',
+      },
+      {
+        src: '/android-chrome-512x512.png',
+        type: 'image/png',
+        sizes: '512x512',
+        purpose: 'maskable',
+      },
+      { src: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
     ],
   };
 }

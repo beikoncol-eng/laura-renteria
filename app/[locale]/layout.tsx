@@ -40,6 +40,19 @@ export async function generateMetadata({
     publisher: SITE.name,
     keywords: [...SEO_KEYWORDS],
     formatDetection: { email: false, address: false, telephone: false },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+      apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+      shortcut: ['/favicon.ico'],
+      other: [
+        { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#141414' },
+      ],
+    },
     // Root-level localized alternates (canonical + hreflang). Pages extend
     // this via their own generateMetadata with page-specific title/description.
     ...buildMetadata({ locale: resolved }),
