@@ -8,7 +8,7 @@ import { SERVICE_AREAS, servicePath } from '@/lib/domain';
 import { humanizeSlug } from '@/lib/utils';
 
 /**
- * 4. Services — the three consulting areas as an oversized editorial index.
+ * 4. Services — the four consulting areas as an oversized editorial index.
  * Each row is a premium block: a large name that shifts on hover with an arrow
  * reveal, the approved tagline, and a link to the full service. Approved copy
  * throughout — no placeholders, no landing-page cards.

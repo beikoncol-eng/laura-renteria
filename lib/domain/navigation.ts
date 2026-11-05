@@ -1,4 +1,5 @@
 import { ROUTES } from './routes';
+import { PROJECTS_LIVE } from './work';
 
 /**
  * Navigation model — mirrors the approved IA exactly. Structure only (keys +
@@ -22,13 +23,14 @@ export interface NavItem {
 
 /**
  * The full IA. `published: false` marks a route that exists internally but is
- * not yet linked publicly (Work and Portfolio await finished content).
+ * not yet linked publicly (Portfolio awaits content; Projects goes live with
+ * its first client-authorized case).
  */
 export const MAIN_NAV: readonly NavItem[] = [
   { key: 'home', href: ROUTES.home, published: true },
   { key: 'about', href: ROUTES.about, published: true },
   { key: 'services', href: ROUTES.services, published: true },
-  { key: 'work', href: ROUTES.work, published: false },
+  { key: 'work', href: ROUTES.work, published: PROJECTS_LIVE },
   { key: 'portfolio', href: ROUTES.portfolio, published: false },
   { key: 'contact', href: ROUTES.contact, published: true },
 ] as const;

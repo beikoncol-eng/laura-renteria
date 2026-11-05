@@ -1,7 +1,7 @@
 /**
  * Service model — the heart of the business domain.
  *
- * The business exposes THREE consulting areas. Each area contains a collection
+ * The business exposes FOUR consulting areas. Each area contains a collection
  * of CAPABILITIES (never "subservices"): capabilities only explain what an area
  * includes — the website sells the areas, not the capabilities. Capabilities
  * are not routed and have no pages of their own.
@@ -16,6 +16,7 @@ export const SERVICE_SLUGS = [
   'creative-direction',
   'digital-marketing',
   'image-consulting',
+  'web-design',
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
@@ -53,6 +54,9 @@ export const CAPABILITY_SLUGS = [
   'wardrobe-strategy',
   'personal-positioning',
   'visual-identity-for-professionals',
+  // Web Design (also reuses the website capabilities above)
+  'ux-ui-design',
+  'seo-foundations',
 ] as const;
 
 export type CapabilitySlug = (typeof CAPABILITY_SLUGS)[number];
@@ -100,6 +104,16 @@ export const SERVICE_AREAS: readonly ServiceArea[] = [
       'wardrobe-strategy',
       'personal-positioning',
       'visual-identity-for-professionals',
+    ],
+  },
+  {
+    slug: 'web-design',
+    capabilities: [
+      'website-strategy',
+      'ux-ui-design',
+      'website-design-development',
+      'landing-pages',
+      'seo-foundations',
     ],
   },
 ] as const;

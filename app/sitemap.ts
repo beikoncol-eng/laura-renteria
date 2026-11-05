@@ -1,9 +1,17 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
-import { SITE, ROUTES, SERVICE_SLUGS, servicePath } from '@/lib/domain';
+import {
+  SITE,
+  ROUTES,
+  SERVICE_SLUGS,
+  PUBLISHED_CASES,
+  PROJECTS_LIVE,
+  servicePath,
+  workPath,
+} from '@/lib/domain';
 
 /**
- * Sitemap — every LIVE route (home, the primary pages, and the three
+ * Sitemap — every LIVE route (home, the primary pages, and the four
  * consulting-area pages), each with per-locale hreflang alternates. Pages not
  * yet built are omitted so search engines aren't pointed at 404s.
  */
@@ -16,6 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ROUTES.services,
     ROUTES.contact,
     ...SERVICE_SLUGS.map((slug) => servicePath(slug)),
+    // Projects and its cases appear only once a client has authorized publication.
+    ...(PROJECTS_LIVE ? [ROUTES.work] : []),
+    ...PUBLISHED_CASES.map((c) => workPath(c.slug)),
   ];
   const lastModified = new Date();
 

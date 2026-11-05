@@ -7,7 +7,7 @@ import { PageWrapper } from '@/components/layout';
 import { ServicesLanding } from '@/features/services-landing';
 
 /**
- * Services landing route — the editorial index of the three consulting areas.
+ * Services landing route — the editorial index of the four consulting areas.
  * Solid header (type-forward hero, no full-bleed portrait behind the bar).
  */
 export function generateStaticParams() {

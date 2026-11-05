@@ -13,9 +13,10 @@
     "home": "Inicio",
     "about": "Sobre mí",
     "services": "Servicios",
-    "work": "Casos",
+    "work": "Proyectos",
     "portfolio": "Portafolio",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "allServices": "Todos los servicios"
   },
   "cta": {
     "label": "Trabajemos juntas"
@@ -37,10 +38,10 @@
     },
     "services": {
       "title": "Servicios",
-      "description": "Tres áreas de consultoría: dirección creativa, marketing digital y consultoría de imagen."
+      "description": "Cuatro áreas de consultoría: dirección creativa, marketing digital, consultoría de imagen y diseño web."
     },
     "work": {
-      "title": "Casos",
+      "title": "Proyectos",
       "description": "Proyectos donde la marca y la persona se construyeron a la vez."
     },
     "portfolio": {
@@ -59,7 +60,7 @@
       "clientsEyebrow": "Casos seleccionados"
     },
     "servicesLanding": {
-      "areasEyebrow": "Las tres áreas"
+      "areasEyebrow": "Las cuatro áreas"
     },
     "portfolio": {
       "eyebrow": "Portafolio",
@@ -96,7 +97,7 @@
     "services": {
       "eyebrow": "Qué hago",
       "headline": "Cómo puedo ayudarte",
-      "subhead": "Puedes trabajar uno solo o los tres juntos. La mayoría de los proyectos empiezan por uno y terminan tocando los otros dos.",
+      "subhead": "Puedes trabajar una sola área o varias juntas. La mayoría de los proyectos empiezan por una y terminan tocando las demás.",
       "exploreCta": "Ver el servicio completo"
     },
     "process": {
@@ -134,7 +135,7 @@
       ]
     },
     "work": {
-      "eyebrow": "Casos",
+      "eyebrow": "Proyectos",
       "headline": "Trabajo en detalle",
       "subhead": "Proyectos donde la marca y la persona se construyeron a la vez.",
       "placeholder": "Los casos se publican con autorización de cada cliente. Algunos proyectos se trabajan bajo confidencialidad y no aparecen aquí. Si quieres ver trabajo relacionado con tu sector, escríbeme y te lo comparto en privado.",
@@ -203,6 +204,15 @@
           "Negocios que están invirtiendo en marketing sin claridad sobre qué está funcionando.",
           "Marcas y profesionales cuyo perfil no está a la altura de la calidad de su trabajo.",
           "Equipos y fundadores que producen mucho y conectan poco."
+        ]
+      },
+      "web-design": {
+        "tagline": "Que tu sitio diga lo mismo que tu marca, y que lo diga mejor.",
+        "overview": "Sitios web pensados desde la marca: estructura, mensajes, diseño y desarrollo en un solo proceso, para que lo que la gente encuentra en línea corresponda a lo que eres y la lleve a actuar.",
+        "who": [
+          "Marcas que estrenan identidad y necesitan un sitio que esté a su altura.",
+          "Negocios cuyo sitio actual es una plantilla que no se parece a ellos.",
+          "Restaurantes, estudios y profesionales que necesitan mostrar lo que hacen, recibir reservas o vender en línea."
         ]
       },
       "image-consulting": {
@@ -276,6 +286,14 @@
         "description": "Leer lo que pasó y decidir qué cambiar.",
         "supporting": "Los números que importan, revisados con un ritmo fijo y convertidos en decisiones, no en tableros que nadie abre."
       },
+      "ux-ui-design": {
+        "description": "Que cada pantalla sea fácil de entender.",
+        "supporting": "Arquitectura, navegación e interfaz diseñadas para que quien llega encuentre lo que busca sin pensarlo, en el móvil primero."
+      },
+      "seo-foundations": {
+        "description": "Que te encuentren cuando te buscan.",
+        "supporting": "Estructura, metadatos, velocidad y contenido preparados desde el inicio para buscadores y para compartir en redes."
+      },
       "image-consulting": {
         "description": "Cómo te ves, cómo te mueves y cómo te recuerdan.",
         "supporting": "Es el trabajo completo sobre la impresión que dejas."
@@ -304,6 +322,179 @@
         "description": "Un sistema de imagen personal, no un look de una vez.",
         "supporting": "Color, estilo, fotografía y los detalles que te hacen reconocible en todos los contextos donde apareces."
       }
+    }
+  },
+  "work": {
+    "labels": {
+      "eyebrow": "Proyecto",
+      "client": "Cliente",
+      "location": "Ubicación",
+      "disciplines": "Disciplinas",
+      "year": "Año",
+      "visit": "Ver el sitio",
+      "viewCase": "Ver el caso",
+      "related": "Trabajo realizado"
+    },
+    "cases": {
+      "popular-el-conuco": {
+        "name": "POPULAR by El Conuco",
+        "tagline": "La marca y la web de un restaurante latinoamericano en Nueva York.",
+        "client": "POPULAR by El Conuco",
+        "location": "Nueva York",
+        "intro": "El Conuco abría un concepto nuevo: cocina latinoamericana con acento dominicano, hecha para compartir. Creamos la marca desde cero y la llevamos a todo: papelería, empaque, uniformes, redes y una web pensada para el móvil.",
+        "hero": {
+          "eyebrow": "Proyecto · Branding y web · 2026",
+          "scroll": "Desliza"
+        },
+        "brand": {
+          "label": "Creación de marca",
+          "steps": [
+            {
+              "title": "Un logo que se reconoce sin firmar.",
+              "body": "Tipografía condensada, pesada y directa, con un isotipo P que funciona solo: en un sello, una servilleta o un ícono de app."
+            },
+            {
+              "title": "Rojo y crema mandan.",
+              "body": "Una paleta jerarquizada: el crema sostiene, el rojo da carácter y cuatro tintas de acento narran los territorios de la carta."
+            },
+            {
+              "title": "La comida, dibujada.",
+              "body": "Una biblioteca de ilustración gastronómica hecha a mano que pinta cualquier pieza con un solo color de la paleta."
+            }
+          ]
+        },
+        "applications": {
+          "title": "La marca en la calle",
+          "captions": [
+            "Bolsas para llevar",
+            "Tarjetas de presentación",
+            "Caja para llevar",
+            "Bowls",
+            "Uniformes de cocina",
+            "Redes sociales"
+          ]
+        },
+        "web": {
+          "label": "Creación web",
+          "title": "La carta, la reserva y el lugar. En el móvil.",
+          "body": "La web nace del mismo sistema y se diseñó primero para el teléfono, que es donde la gente decide dónde va a comer.",
+          "points": [
+            "Carta digital completa con una sola fuente de datos",
+            "Pedidos y reservas listos para conectar",
+            "Next.js: rápida, accesible y preparada para buscadores"
+          ]
+        },
+        "scope": {
+          "title": "Qué hicimos",
+          "columns": [
+            {
+              "title": "Branding",
+              "items": [
+                "Concepto de marca: «Lo bueno se vuelve popular»",
+                "Logotipo, firmas e isotipo P",
+                "Paleta de seis colores y tipografía",
+                "Biblioteca de 30 ilustraciones gastronómicas",
+                "Frases propias y tono de voz",
+                "Manual de marca",
+                "Carta del restaurante",
+                "Aplicaciones: papelería, empaque, uniformes y redes"
+              ]
+            },
+            {
+              "title": "Web",
+              "items": [
+                "Sitio web: inicio, carta, el lugar, reservas y pedidos",
+                "Carta digital con una sola fuente de datos",
+                "Diseño pensado primero para el móvil",
+                "Desarrollo en Next.js y publicación"
+              ]
+            }
+          ]
+        },
+        "film": {
+          "label": "Proceso",
+          "title": "Del primer trazo al sistema."
+        }
+      },
+      "ansias-tattoo": {
+        "name": "Ansias Tattoo",
+        "tagline": "Una web que se recorre como una película, para un tatuador de Bogotá en Nueva York.",
+        "client": "Ansias",
+        "location": "Nueva York",
+        "intro": "Ansias llegó a Nueva York con más de diez años de oficio y un portafolio que merecía más que un feed. Hicimos la dirección creativa de su sitio, lo diseñamos y desarrollamos como una película en blanco y negro, y automatizamos las citas para que cada solicitud llegue directo al estudio.",
+        "hero": {
+          "eyebrow": "Proyecto · Dirección creativa y web · 2026",
+          "scroll": "Desliza"
+        },
+        "story": {
+          "label": "Dirección creativa",
+          "steps": [
+            {
+              "title": "Su firma, intacta.",
+              "body": "Recuperamos el monograma y el corazón originales del artista, sin redibujarlos, y les dimos reglas: el monograma firma; el corazón aparece solo en momentos elegidos."
+            },
+            {
+              "title": "Tres voces.",
+              "body": "Una grotesca amplia y silenciosa para la marca, una serif cálida para la voz del artista y una monoespaciada para la máquina. Como el tatuaje: oficio, persona e instrumento."
+            },
+            {
+              "title": "El color es un evento.",
+              "body": "Todo vive en un blanco y negro cálido. El color aparece solo cuando importa: en la pieza que lo merece."
+            }
+          ]
+        },
+        "gallery": {
+          "title": "El trabajo"
+        },
+        "web": {
+          "label": "Diseño y desarrollo web",
+          "title": "Un portafolio como una película.",
+          "body": "La obra a pantalla completa, un archivo por estilos y una página de citas que invita a contar la idea antes de agendar. El mismo pulso en escritorio y en móvil.",
+          "points": [
+            "Archivo de obra filtrable por estilo",
+            "Formulario de citas con confirmación por email",
+            "Cada solicitud llega directo al WhatsApp del estudio"
+          ]
+        },
+        "flow": {
+          "title": "Reservas automáticas",
+          "steps": [
+            "El cliente cuenta su idea",
+            "Se guarda la solicitud",
+            "Email al cliente y al estudio",
+            "Aviso al WhatsApp del estudio"
+          ]
+        },
+        "scope": {
+          "title": "Qué hicimos",
+          "columns": [
+            {
+              "title": "Dirección creativa",
+              "items": [
+                "Concepto: la web como una película",
+                "Sistema de tres voces tipográficas",
+                "Recuperación del monograma y el corazón originales",
+                "Dirección de imagen: blanco y negro, el color como evento"
+              ]
+            },
+            {
+              "title": "Web",
+              "items": [
+                "Diseño y desarrollo del sitio",
+                "Archivo de obra por estilos",
+                "Formulario de citas con confirmación por email",
+                "Aviso automático al WhatsApp del estudio"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "filters": {
+      "label": "Filtrar por disciplina",
+      "all": "Todos",
+      "branding": "Branding",
+      "web": "Web"
     }
   },
   "contact": {

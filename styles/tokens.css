@@ -61,16 +61,16 @@
   --space-64: 4rem;
   --space-80: 5rem;
   --space-96: 6rem;
-  /* Large vertical values trimmed ~25–30% in RC6 to close blank areas while
-     the small reading-rhythm steps (4–96) stay intact. */
-  --space-120: 5rem; /* was 7.5rem */
-  --space-160: 6rem; /* was 10rem */
-  --space-240: 8.5rem; /* was 15rem */
+  /* Large vertical values — relaxed back to a comfortable editorial rhythm
+     (RC7 had over-compressed them, leaving the page feeling cramped). */
+  --space-120: 6.5rem; /* 104 */
+  --space-160: 8rem; /* 128 */
+  --space-240: 11rem; /* 176 */
 
   /* ── Section rhythm ────────────────────────────────────────*/
-  --section-y-desktop: 5.75rem; /* 92 — RC7 tighter (was 144 → 104) */
-  --section-y-desktop-min: 4rem; /* 64 */
-  --section-y-mobile: 3.25rem; /* 52 (was 80 → 60) */
+  --section-y-desktop: 8rem; /* 128 — comfortable breathing between sections */
+  --section-y-desktop-min: 5.5rem; /* 88 */
+  --section-y-mobile: 4.5rem; /* 72 */
 
   /* ── Layout ────────────────────────────────────────────────*/
   --content-max: 1440px; /* max content width */

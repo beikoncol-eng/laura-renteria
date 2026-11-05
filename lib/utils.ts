@@ -17,6 +17,14 @@ export function cn(...inputs: ClassValue[]): string {
 export function humanizeSlug(slug: string): string {
   return slug
     .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .map((word) =>
+      ACRONYMS.has(word)
+        ? word.toUpperCase()
+        : word.charAt(0).toUpperCase() + word.slice(1),
+    )
+    .join(' ')
+    .replace('UX UI', 'UX/UI');
 }
+
+/** Slug words that display as acronyms. */
+const ACRONYMS = new Set(['ux', 'ui', 'seo']);

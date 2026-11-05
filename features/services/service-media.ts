@@ -30,4 +30,9 @@ export const SERVICE_MEDIA: Partial<Record<ServiceSlug, ServiceMedia>> = {
     craft: MEDIA.aboutPortrait,
     support: MEDIA.heroPortrait,
   },
+  'web-design': {
+    hero: MEDIA.studioWide,
+    craft: MEDIA.creativeDirectionCraft,
+    support: MEDIA.editorialBreak,
+  },
 };

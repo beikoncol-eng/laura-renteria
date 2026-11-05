@@ -1,16 +1,21 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { motion, useReducedMotion, type Variants } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  type Variants,
+} from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { X } from 'lucide-react';
+import { ChevronDown, X } from 'lucide-react';
 import { Container } from '@/components/layout';
 import { NavLink } from './nav-link';
 import { buttonClassName } from '@/components/buttons';
 import { useLockBodyScroll } from '@/hooks/use-lock-body-scroll';
-import { PUBLIC_NAV, CTA_ITEM } from '@/lib/domain';
-import { cn } from '@/lib/utils';
+import { PUBLIC_NAV, CTA_ITEM, SERVICE_AREAS, servicePath } from '@/lib/domain';
+import { cn, humanizeSlug } from '@/lib/utils';
 
 /**
  * MobileMenu — full-screen editorial menu (not a drawer / slide-over).
@@ -18,7 +23,8 @@ import { cn } from '@/lib/utils';
  * Mounted only while open (AnimatePresence in MobileNavigation handles exit).
  * Large typography, generous spacing, minimal interaction. Fade + a small
  * translate on the list, both removed under reduced-motion. Accessible modal:
- * scroll lock, focus trap, Escape to close.
+ * scroll lock, focus trap, Escape to close. Services expands in place to
+ * list the consulting areas.
  */
 const FOCUSABLE =
   'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -32,6 +38,7 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
   const tA11y = useTranslations('a11y');
   const tCta = useTranslations('cta');
   const reduce = useReducedMotion();
+  const [servicesOpen, setServicesOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -116,13 +123,61 @@ export function MobileMenu({ onClose }: MobileMenuProps) {
         >
           {PUBLIC_NAV.map((navItem) => (
             <motion.li key={navItem.key} variants={item}>
-              <NavLink
-                href={navItem.href}
-                onClick={onClose}
-                className="font-display tracking-display text-[2.25rem] leading-[1.1]"
-              >
-                {t(navItem.key)}
-              </NavLink>
+              <div className="flex items-center justify-between">
+                <NavLink
+                  href={navItem.href}
+                  onClick={onClose}
+                  className="font-display tracking-display text-[2.25rem] leading-[1.1]"
+                >
+                  {t(navItem.key)}
+                </NavLink>
+                {navItem.key === 'services' ? (
+                  <button
+                    type="button"
+                    aria-expanded={servicesOpen}
+                    aria-controls="mobile-services"
+                    aria-label={t('services')}
+                    onClick={() => setServicesOpen((o) => !o)}
+                    className="text-ink inline-flex h-[var(--touch-min)] w-[var(--touch-min)] items-center justify-center"
+                  >
+                    <ChevronDown
+                      size={22}
+                      strokeWidth={1.5}
+                      aria-hidden
+                      className={cn(
+                        'transition-transform duration-300',
+                        servicesOpen && 'rotate-180',
+                      )}
+                    />
+                  </button>
+                ) : null}
+              </div>
+              {navItem.key === 'services' ? (
+                <AnimatePresence initial={false}>
+                  {servicesOpen ? (
+                    <motion.ul
+                      id="mobile-services"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+                      className="border-line flex flex-col overflow-hidden border-l pl-[var(--space-16)]"
+                    >
+                      {SERVICE_AREAS.map((area) => (
+                        <li key={area.slug} className="pt-[var(--space-16)]">
+                          <NavLink
+                            href={servicePath(area.slug)}
+                            onClick={onClose}
+                            className="font-display tracking-display text-muted text-[1.375rem] leading-[1.2]"
+                          >
+                            {humanizeSlug(area.slug)}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </motion.ul>
+                  ) : null}
+                </AnimatePresence>
+              ) : null}
             </motion.li>
           ))}
         </motion.ul>

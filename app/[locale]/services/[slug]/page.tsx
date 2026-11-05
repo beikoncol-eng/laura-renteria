@@ -14,7 +14,7 @@ import { PageWrapper, JsonLd } from '@/components/layout';
 import { ServicePage } from '@/features/services';
 
 /**
- * Consulting-area pages — the three canonical service pages. Copy is the
+ * Consulting-area pages — the four canonical service pages. Copy is the
  * approved deck, reorganized to the current business model. Digital Marketing
  * and Image Consulting render with placeholder photography until their frames
  * exist, and with pending placeholders for capabilities the deck doesn't cover.
@@ -23,6 +23,7 @@ const LIVE_SERVICES: ServiceSlug[] = [
   'creative-direction',
   'digital-marketing',
   'image-consulting',
+  'web-design',
 ];
 
 export function generateStaticParams() {

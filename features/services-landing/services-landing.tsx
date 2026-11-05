@@ -20,7 +20,7 @@ import { MEDIA, type MediaAsset } from '@/lib/media';
 import { humanizeSlug } from '@/lib/utils';
 
 /**
- * Services landing — the editorial index of the three consulting areas. Not a
+ * Services landing — the editorial index of the four consulting areas. Not a
  * pricing page: each area is a full editorial block (large name, tagline, the
  * approved overview, a preview of what's included) beside its own photograph,
  * sides alternating down the page, linking through to the dedicated page.
@@ -31,12 +31,14 @@ const AREA_IMAGE: Record<ServiceSlug, MediaAsset> = {
   'creative-direction': MEDIA.creativeDirectionHero,
   'digital-marketing': MEDIA.processCuration,
   'image-consulting': MEDIA.closingPortrait,
+  'web-design': MEDIA.studioWide,
 };
 
 const AREA_POSITION: Record<ServiceSlug, string> = {
   'creative-direction': '50% 12%',
   'digital-marketing': '50% 12%',
   'image-consulting': '50% 10%',
+  'web-design': '50% 40%',
 };
 
 interface AreaCopy {
@@ -94,7 +96,7 @@ function LandingHero() {
   );
 }
 
-/* ── The three areas, sides alternating ───────────────────────────────────── */
+/* ── The four areas, sides alternating ────────────────────────────────────── */
 function Areas() {
   const tP = useTranslations('pages.servicesLanding');
   const tAreas = useTranslations('services.areas');

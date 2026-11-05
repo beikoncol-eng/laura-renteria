@@ -1,4 +1,9 @@
-import { getServiceArea, type ServiceSlug } from '@/lib/domain';
+import {
+  casesForService,
+  getServiceArea,
+  type ServiceSlug,
+} from '@/lib/domain';
+import { RelatedWork } from '@/features/work';
 import { SERVICE_MEDIA } from './service-media';
 import {
   ServiceHero,
@@ -15,7 +20,7 @@ import {
  * the approved (reorganized) Copy Deck.
  *
  * Section order: Hero → Overview → Who it's for → What's included (capabilities)
- * → Process → FAQ → CTA. Photography comes from per-area SERVICE_MEDIA (Creative
+ * → Process → Work done (published cases only) → FAQ → CTA. Photography comes from per-area SERVICE_MEDIA (Creative
  * Direction only for now; Digital Marketing and Image Consulting fall back to
  * placeholders until their working-lifestyle frames exist). The Footer is
  * provided by the shell.
@@ -31,6 +36,7 @@ export function ServicePage({ slug }: { slug: ServiceSlug }) {
       <ServiceWhoItsFor slug={slug} />
       <ServiceCapabilities capabilities={area.capabilities} />
       <ServiceProcess craft={media?.craft} />
+      <RelatedWork cases={casesForService(slug)} />
       <ServiceFaq />
       <ServiceCta />
     </>

@@ -13,9 +13,10 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "work": "Work",
+    "work": "Projects",
     "portfolio": "Portfolio",
-    "contact": "Contact"
+    "contact": "Contact",
+    "allServices": "All services"
   },
   "cta": {
     "label": "Work with me"
@@ -37,10 +38,10 @@
     },
     "services": {
       "title": "Services",
-      "description": "Three consulting areas: creative direction, digital marketing and image consulting."
+      "description": "Four consulting areas: creative direction, digital marketing, image consulting and web design."
     },
     "work": {
-      "title": "Work",
+      "title": "Projects",
       "description": "Projects where the brand and the person were built at the same time."
     },
     "portfolio": {
@@ -59,7 +60,7 @@
       "clientsEyebrow": "Selected work"
     },
     "servicesLanding": {
-      "areasEyebrow": "The three areas"
+      "areasEyebrow": "The four areas"
     },
     "portfolio": {
       "eyebrow": "Portfolio",
@@ -96,7 +97,7 @@
     "services": {
       "eyebrow": "What I do",
       "headline": "How I can help",
-      "subhead": "You can work on one or all three. Most projects start with one and end up touching the other two.",
+      "subhead": "You can work on one area or several together. Most projects start with one and end up touching the others.",
       "exploreCta": "See the full service"
     },
     "process": {
@@ -134,7 +135,7 @@
       ]
     },
     "work": {
-      "eyebrow": "Selected work",
+      "eyebrow": "Projects",
       "headline": "The work, in detail",
       "subhead": "Projects where the brand and the person were built at the same time.",
       "placeholder": "Case studies are published with each client's permission. Some projects are covered by confidentiality and don't appear here. If you'd like to see work relevant to your sector, write to me and I'll share it privately.",
@@ -203,6 +204,15 @@
           "Businesses spending on marketing without clarity on what's working.",
           "Brands and professionals whose profile doesn't match the quality of their work.",
           "Teams and founders producing a great deal and connecting very little."
+        ]
+      },
+      "web-design": {
+        "tagline": "A website that says what your brand says — and says it better.",
+        "overview": "Websites built from the brand out: structure, messaging, design and development in one process, so what people find online matches who you are and moves them to act.",
+        "who": [
+          "Brands launching a new identity that need a website to match it.",
+          "Businesses whose current site is a template that looks nothing like them.",
+          "Restaurants, studios and professionals who need to show their work, take bookings or sell online."
         ]
       },
       "image-consulting": {
@@ -276,6 +286,14 @@
         "description": "Reading what happened, then deciding what to change.",
         "supporting": "The numbers that matter, reviewed on a set cadence and turned into decisions, not dashboards nobody opens."
       },
+      "ux-ui-design": {
+        "description": "Every screen, easy to understand.",
+        "supporting": "Architecture, navigation and interface designed so visitors find what they need without thinking about it — mobile first."
+      },
+      "seo-foundations": {
+        "description": "Being found when people look for you.",
+        "supporting": "Structure, metadata, speed and content set up from day one for search engines and for sharing on social."
+      },
       "image-consulting": {
         "description": "How you look, how you move, and what people remember.",
         "supporting": "It's the complete body of work on the impression you leave."
@@ -304,6 +322,179 @@
         "description": "A personal image system, not a one-off look.",
         "supporting": "Colour, style, photography and the details that make you recognisable across every context you appear in."
       }
+    }
+  },
+  "work": {
+    "labels": {
+      "eyebrow": "Project",
+      "client": "Client",
+      "location": "Location",
+      "disciplines": "Disciplines",
+      "year": "Year",
+      "visit": "Visit the site",
+      "viewCase": "View case",
+      "related": "Work done"
+    },
+    "cases": {
+      "popular-el-conuco": {
+        "name": "POPULAR by El Conuco",
+        "tagline": "Brand and website for a Latin American restaurant in New York.",
+        "client": "POPULAR by El Conuco",
+        "location": "New York",
+        "intro": "El Conuco was opening a new concept: Latin American food with a Dominican accent, made for sharing. We built the brand from scratch and carried it everywhere: stationery, packaging, uniforms, social and a mobile-first website.",
+        "hero": {
+          "eyebrow": "Project · Branding & web · 2026",
+          "scroll": "Scroll"
+        },
+        "brand": {
+          "label": "Brand creation",
+          "steps": [
+            {
+              "title": "A logo you recognise without a signature.",
+              "body": "Condensed, heavy, direct type, with a P isotype that works on its own: on a stamp, a napkin or an app icon."
+            },
+            {
+              "title": "Red and cream lead.",
+              "body": "A ranked palette: cream holds, red brings character and four accent inks narrate the territories of the menu."
+            },
+            {
+              "title": "Food, drawn by hand.",
+              "body": "A library of hand-drawn food illustration that paints any piece in a single colour from the palette."
+            }
+          ]
+        },
+        "applications": {
+          "title": "The brand on the street",
+          "captions": [
+            "Takeaway bags",
+            "Business cards",
+            "Takeaway box",
+            "Bowls",
+            "Kitchen uniforms",
+            "Social media"
+          ]
+        },
+        "web": {
+          "label": "Web design",
+          "title": "The menu, the booking and the place. On mobile.",
+          "body": "The website grows out of the same system and was designed phone-first, because that's where people decide where to eat.",
+          "points": [
+            "Complete digital menu with a single data source",
+            "Ordering and reservations ready to connect",
+            "Next.js: fast, accessible and search-ready"
+          ]
+        },
+        "scope": {
+          "title": "What we made",
+          "columns": [
+            {
+              "title": "Branding",
+              "items": [
+                "Brand concept: “Good things become popular”",
+                "Logotype, lockups and the P isotype",
+                "Six-colour palette and typography",
+                "Library of 30 food illustrations",
+                "Brand phrases and tone of voice",
+                "Brand manual",
+                "Restaurant menu",
+                "Applications: stationery, packaging, uniforms and social"
+              ]
+            },
+            {
+              "title": "Web",
+              "items": [
+                "Website: home, menu, the place, bookings and ordering",
+                "Digital menu with a single data source",
+                "Mobile-first design",
+                "Next.js development and launch"
+              ]
+            }
+          ]
+        },
+        "film": {
+          "label": "Process",
+          "title": "From the first stroke to the system."
+        }
+      },
+      "ansias-tattoo": {
+        "name": "Ansias Tattoo",
+        "tagline": "A website you move through like a film, for a Bogotá-born tattoo artist in New York.",
+        "client": "Ansias",
+        "location": "New York",
+        "intro": "Ansias arrived in New York with over ten years of craft and a portfolio that deserved more than a feed. We led the creative direction of his site, designed and built it as a black-and-white film, and automated bookings so every request reaches the studio directly.",
+        "hero": {
+          "eyebrow": "Project · Creative direction & web · 2026",
+          "scroll": "Scroll"
+        },
+        "story": {
+          "label": "Creative direction",
+          "steps": [
+            {
+              "title": "His signature, untouched.",
+              "body": "We recovered the artist's original monogram and heart, never redrawn, and gave them rules: the monogram signs; the heart appears only in chosen moments."
+            },
+            {
+              "title": "Three voices.",
+              "body": "A wide, quiet grotesque for the brand, a warm serif for the artist's voice and a monospace for the machine. Like tattooing itself: craft, person and instrument."
+            },
+            {
+              "title": "Colour is an event.",
+              "body": "Everything lives in a warm black and white. Colour appears only when it matters: in the piece that earns it."
+            }
+          ]
+        },
+        "gallery": {
+          "title": "The work"
+        },
+        "web": {
+          "label": "Web design & development",
+          "title": "A portfolio like a film.",
+          "body": "The work full-bleed, an archive by style and an appointments page that invites the idea before the booking. The same pulse on desktop and mobile.",
+          "points": [
+            "Work archive filterable by style",
+            "Appointment form with email confirmation",
+            "Every request reaches the studio's WhatsApp directly"
+          ]
+        },
+        "flow": {
+          "title": "Automated bookings",
+          "steps": [
+            "The client shares the idea",
+            "The request is stored",
+            "Email to client and studio",
+            "Alert on the studio's WhatsApp"
+          ]
+        },
+        "scope": {
+          "title": "What we made",
+          "columns": [
+            {
+              "title": "Creative direction",
+              "items": [
+                "Concept: the website as a film",
+                "A system of three typographic voices",
+                "Recovery of the original monogram and heart",
+                "Image direction: black and white, colour as an event"
+              ]
+            },
+            {
+              "title": "Web",
+              "items": [
+                "Site design and development",
+                "Work archive by style",
+                "Appointment form with email confirmation",
+                "Automatic alert on the studio's WhatsApp"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "filters": {
+      "label": "Filter by discipline",
+      "all": "All",
+      "branding": "Branding",
+      "web": "Web"
     }
   },
   "contact": {

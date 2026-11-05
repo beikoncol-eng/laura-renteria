@@ -78,6 +78,7 @@ export function SiteJsonLd({ locale }: { locale: string }) {
           'Brand Strategy',
           'Creative Direction',
           'Image Consulting',
+          'Web Design',
         ],
         address: {
           '@type': 'PostalAddress',

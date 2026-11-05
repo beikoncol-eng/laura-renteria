@@ -173,7 +173,7 @@ function Philosophy() {
   );
 }
 
-/* ── The practice — the three areas as an editorial index ─────────────────── */
+/* ── The practice — the four areas as an editorial index ──────────────────── */
 function Practice() {
   const tP = useTranslations('pages.about');
   const tS = useTranslations('home.services');
