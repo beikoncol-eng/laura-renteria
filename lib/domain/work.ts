@@ -27,7 +27,7 @@ export interface CaseStudy {
 export const CASE_STUDIES: readonly CaseStudy[] = [
   {
     slug: 'popular-el-conuco',
-    published: false, // pending client authorization
+    published: true, // authorized by the studio owner
     year: 2026,
     services: ['creative-direction', 'web-design'],
     disciplines: ['branding', 'web'],
@@ -35,7 +35,7 @@ export const CASE_STUDIES: readonly CaseStudy[] = [
   },
   {
     slug: 'ansias-tattoo',
-    published: false, // pending client authorization
+    published: true, // authorized by the studio owner
     year: 2026,
     services: ['creative-direction', 'web-design'],
     disciplines: ['web'], // the brand marks are the artist's own
