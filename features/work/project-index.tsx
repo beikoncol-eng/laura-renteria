@@ -18,7 +18,7 @@ import { cn } from '@/lib/utils';
  * Project index — the Projects grid with discipline filters (All · Branding ·
  * Web). Filtering re-flows the grid with shared-layout motion; each card is a
  * large cover with number, name, line, discipline tags and year, and the cover
- * eases in on hover. The second column sits lower for an editorial rhythm.
+ * eases in on hover. Cards align to a single top line so the row reads evenly.
  */
 export interface ProjectItem {
   slug: string;
@@ -90,7 +90,7 @@ export function ProjectIndex({
 
       <motion.ul
         layout
-        className="grid grid-cols-1 gap-x-[var(--space-48)] gap-y-[var(--space-96)] pt-[var(--space-64)] md:grid-cols-2"
+        className="grid grid-cols-1 items-start gap-x-[var(--space-48)] gap-y-[var(--space-96)] pt-[var(--space-64)] md:grid-cols-2"
       >
         <AnimatePresence mode="popLayout">
           {shown.map((p, i) => (
@@ -105,7 +105,6 @@ export function ProjectIndex({
                 ease: EASE.luxe,
                 delay: reduce ? 0 : i * 0.08,
               }}
-              className={i % 2 === 1 ? 'md:pt-[var(--space-160)]' : undefined}
             >
               <ProjectCard
                 project={p}
